@@ -1,0 +1,1 @@
+export { SplitReveal } from "./SplitReveal";

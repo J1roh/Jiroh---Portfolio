@@ -1,0 +1,33 @@
+/* Figma "Hero v2": Geist Mono 12 px on a 7.2 × 16 px cell. AsciiSculpture.tsx reads these once. */
+.ascii-sculpture {
+  --sculpture-size: 12px;
+  --sculpture-line: 16px;
+  --sculpture-field: var(--color-field);
+  --sculpture-edge: var(--color-steel);
+  --sculpture-body: var(--color-ink);
+  position: relative;
+  overflow: clip;
+}
+.ascii-sculpture__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+.ascii-sculpture__chip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-ink);
+  color: var(--color-on-ink);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-micro);
+  pointer-events: none;
+  opacity: 0;
+  margin: var(--space-4) 0 0 var(--space-4);
+  transition: opacity var(--duration-fast) var(--easing-out);
+}
+.ascii-sculpture__chip[data-shown="true"] { opacity: 1; }

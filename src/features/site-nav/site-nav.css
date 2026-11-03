@@ -1,0 +1,53 @@
+/* Figma "Hero v3": pill x400 y24 640×52. The minimap at the right was removed (owner, 2026-10-31). */
+.site-nav {
+  position: fixed;
+  inset: var(--space-5) var(--space-7) auto;
+  z-index: var(--z-nav);
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform var(--duration-base) var(--easing-in-out);
+}
+.site-nav[data-hidden="true"] { transform: translateY(calc(-100% - var(--space-7))); }
+.site-nav__centre {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-1);
+  width: min(100%, var(--nav-width));
+  pointer-events: auto;
+}
+.site-nav__pill {
+  display: flex;
+  align-items: center;
+  height: var(--nav-height);
+  padding: 0 var(--space-2) 0 var(--space-5);
+}
+.site-nav__brand {
+  margin-right: var(--space-7);
+  font-size: var(--text-brand);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-brand);
+}
+.site-nav__links {
+  display: flex;
+  gap: var(--space-6);
+  margin-right: auto;
+  padding: 0;
+  list-style: none;
+}
+.site-nav__pill .theme-toggle { margin-right: var(--space-2); }
+.site-nav__link {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--easing-out);
+}
+.site-nav__link:hover { color: var(--color-text); }
+
+@media (max-width: 760px) {
+  .site-nav { inset-inline: var(--space-4); }
+  .site-nav__links { display: none; }
+  .site-nav__brand { margin-right: auto; }
+}

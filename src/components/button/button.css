@@ -1,0 +1,39 @@
+/* Figma "Hero v2": ink blocks (white on dark, navy on light) with on-ink text, radius 4; mono caps for labels. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: background var(--duration-fast) var(--easing-out), color var(--duration-fast) var(--easing-out);
+}
+.button--solid,
+.button--label {
+  background: var(--color-ink);
+  color: var(--color-on-ink);
+}
+.button--solid:hover,
+.button--label:hover { background: color-mix(in srgb, var(--color-ink) 86%, var(--color-steel)); }
+.button--solid {
+  height: 44px;
+  padding: 0 var(--space-7);
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+}
+.button--label,
+.button--text {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.button--label {
+  height: 36px;
+  padding: 0 var(--space-5);
+  font-size: 0.75rem;
+}
+.button--text {
+  height: 44px;
+  font-size: var(--text-label);
+  color: var(--color-text);
+}
+.button--text:hover { color: var(--color-text-muted); }

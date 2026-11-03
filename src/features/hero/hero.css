@@ -1,0 +1,95 @@
+/* Figma "Hero v3 — Large H1", 1440×900: ASCII field full bleed, scrim on the left 820 px, copy at x96. */
+.hero { position: relative; }
+/* The stage is the visible screen. With the scroll camera on, the section is three screens taller and the
+   stage sticks to the top while the scroll sequence plays (owner, 2026-10-31). */
+.hero__stage {
+  position: relative;
+  height: max(100svh, 56rem);
+  overflow: clip;
+}
+.hero--camera { height: calc(max(100svh, 56rem) + 240svh); } /* PINNED_SCREENS in HeroCameraStage.tsx: one overlapping flow, played by one scroll gesture */
+.hero--camera .hero__stage { position: sticky; top: 0; }
+.hero__camera-stage,
+.hero__camera,
+.hero__drop {
+  position: absolute;
+  inset: 0;
+}
+.hero__field {
+  position: absolute;
+  inset: 0;
+}
+.hero__scrim {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 57%;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--color-scrim) 0%, var(--color-scrim-mid) 75%, transparent 100%);
+}
+.hero__copy {
+  position: relative;
+  z-index: var(--z-content);
+  display: grid;
+  justify-items: start;
+  width: fit-content;
+  max-width: 40rem; /* fits the 96 px hook, which is about 624 px wide */
+  padding: 13.25rem 0 var(--space-8) var(--gutter); /* 40 px lower than Figma's 10.75rem, with the logo (owner, 2026-10-31) */
+}
+.hero__eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+}
+.hero__title {
+  display: grid;
+  margin: var(--space-3) 0 0 -0.04em;
+  font-size: var(--text-hook);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-hook);
+  line-height: var(--leading-hook);
+  white-space: nowrap; /* line breaks come from content, as in Figma */
+}
+.hero__intro {
+  max-width: 27.5rem;
+  margin-top: var(--space-5);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+.hero__rail-wrap {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: var(--z-content);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-7);
+  margin-top: var(--space-6);
+}
+@media (max-width: 860px) {
+  .hero { display: grid; }
+  .hero__stage, .hero__camera { display: contents; }
+  .hero__field { position: relative; order: 2; height: 70svh; }
+  .hero__scrim { display: none; }
+  .hero__copy { padding: 9rem var(--gutter) var(--space-6); }
+  .hero__rail-wrap { position: static; order: 3; }
+}
+/* Ghost wordmark tiles behind the field (Alche's flat phase): huge, faint, fading in as the scene flattens. */
+.hero__tiles {
+  position: absolute;
+  inset: -20%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 0 0.3em;
+  font-size: 22vw;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-hook);
+  line-height: 0.9;
+  color: var(--color-field);
+  pointer-events: none;
+  user-select: none;
+}

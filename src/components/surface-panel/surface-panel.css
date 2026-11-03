@@ -1,0 +1,8 @@
+/* Figma "Hero v2" nav pill: surface fill, 1px hairline, radius 8.
+   Solid on purpose: a backdrop blur over the animated ASCII field made scrolling stutter. */
+.surface-panel {
+  position: relative;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-hairline);
+}

@@ -1,0 +1,23 @@
+:root {
+  --font-sans: "Geist Variable", system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, monospace;
+
+  --text-micro: 0.6875rem;   /* 11: hint, cursor chip */
+  --text-label: 0.8125rem;   /* 13: mono labels, nav links */
+  --text-sm: 0.875rem;       /* 14: list headings */
+  --text-md: 0.9375rem;      /* 15: body small, buttons */
+  --text-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem); /* 18: hero paragraph */
+  --text-brand: 1.125rem;
+  --text-hook: clamp(3rem, 1.2rem + 5.35vw, 6rem); /* 96 at 1440 (Figma Hero v3) */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --leading-hook: 0.94;
+  --leading-normal: 1.5;
+  --tracking-brand: -0.02em;
+  --tracking-hook: -0.04em;
+  --tracking-label: 0.04em;
+  --tracking-micro: 0.06em;
+}

@@ -1,0 +1,16 @@
+.marquee {
+  --marquee-duration: 28s;
+  overflow: clip;
+  white-space: nowrap;
+}
+.marquee__track { display: inline-flex; }
+.marquee__copy { padding-right: 0.6em; }
+.marquee[data-moving="true"] .marquee__track {
+  animation: marquee-scroll var(--marquee-duration) linear infinite;
+}
+@keyframes marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee[data-moving="true"] .marquee__track { animation: none; }
+}

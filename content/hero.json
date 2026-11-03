@@ -1,0 +1,51 @@
+{
+  "eyebrow": "000 / Jiroh — Web · Email · Game",
+  "hookLines": [
+    "Sites, emails",
+    "& games, built",
+    "to ship."
+  ],
+  "intro": "I'm Jiroh. I build the website, the launch email and the game, and cut the graphics and video that go with them.",
+  "primaryCta": {
+    "label": "Start a project",
+    "href": "#contact"
+  },
+  "secondaryCta": {
+    "label": "Selected work ↓",
+    "href": "#work"
+  },
+  "services": [
+    {
+      "index": "001",
+      "title": "Web development",
+      "body": "Sites that load fast and convert.",
+      "phrase": "WEB DEVELOPMENT · SITES THAT LOAD FAST · "
+    },
+    {
+      "index": "002",
+      "title": "Email design",
+      "body": "Launch emails that land in the inbox.",
+      "phrase": "EMAIL DESIGN · LAUNCH EMAILS THAT LAND · "
+    },
+    {
+      "index": "003",
+      "title": "Game development",
+      "body": "Small games people replay.",
+      "phrase": "GAME DEVELOPMENT · GAMES PEOPLE REPLAY · "
+    }
+  ],
+  "sculpture": {
+    "phrase": "WEB DEVELOPMENT · EMAIL DESIGN · GAME DEVELOPMENT · GRAPHIC DESIGN · VIDEO EDITING · SITES, EMAILS & GAMES, BUILT TO SHIP · ",
+    "cursorLabel": "",
+    "hint": "Hover a service and the logo retypes itself"
+  },
+  "transition": {
+    "eyebrow": "001 / About",
+    "lines": [
+      "One pair of hands,",
+      "the whole launch."
+    ],
+    "body": "I design and build the site, code the launch email, make the game, and cut the graphics and video around them. Because it all comes from one person, it looks and sounds like one brand, and nothing gets lost in a handoff."
+  },
+  "wordmark": "JIROH"
+}

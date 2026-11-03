@@ -1,0 +1,38 @@
+/* The hero's closing mask: copy bottom-left on the panel, heading lines on ink highlight boxes. */
+.hero__mask { z-index: var(--z-content); }
+/* Carries the line-art logo along with the ASCII logo while it still pans and drops. */
+.hero__mask-logo-track { position: absolute; inset: 0; pointer-events: none; }
+.hero__mask-copy {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 12vh;
+  display: grid;
+  gap: var(--space-5);
+  max-width: 32rem;
+}
+.hero__mask-title {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-1);
+  font-size: clamp(2rem, 1rem + 2.6vw, 3.5rem);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-hook);
+  line-height: 1;
+}
+.hero__mask-box {
+  display: inline-block;
+  padding: 0.08em 0.18em 0.12em;
+  background: var(--color-mask-ink);
+  color: var(--color-mask-on-ink);
+}
+.hero__mask-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-micro);
+  color: var(--color-mask-muted);
+}
+.hero__mask-body {
+  max-width: 26rem;
+  font-size: var(--text-lg);
+  color: var(--color-mask-muted);
+}

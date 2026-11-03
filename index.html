@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jiroh builds websites, launch emails and games." />
+    <meta name="theme-color" content="#0e141c" />
+    <!-- Theme before first paint (src/lib/theme/use-theme.ts keeps it in sync): the visitor's choice, else the system's. -->
+    <script>
+      (function () {
+        var theme = "dark";
+        try { theme = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"); } catch (error) {}
+        document.documentElement.dataset.theme = theme === "light" ? "light" : "dark";
+        if (theme === "light") document.querySelector('meta[name="theme-color"]').setAttribute("content", "#edeff2");
+      })();
+    </script>
+    <title>Jiroh — Sites, emails &amp; games</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

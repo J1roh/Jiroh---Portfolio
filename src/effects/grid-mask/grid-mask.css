@@ -1,0 +1,41 @@
+/* Figma Reference "Transition - Alche": light panel, 1px grid every 24 px, "+" every 160 px. Top edge flat
+   (owner, 2026-10-31; was a 3vh arc): raise --mask-arc to curve it again. */
+.grid-mask {
+  --mask-arc: 0vh;
+  --mask-grid-step: 24px;
+  --mask-cross-step: 160px;
+  position: absolute;
+  /* Taller by the arc, so at full cover the rounded corners sit above the frame and no sliver shows. */
+  inset: calc(-1 * var(--mask-arc)) 0 0;
+  overflow: clip;
+  border-radius: 50% 50% 0 0 / var(--mask-arc) var(--mask-arc) 0 0;
+  background: var(--color-mask);
+  pointer-events: none;
+  will-change: transform;
+}
+.grid-mask__frame {
+  position: absolute;
+  inset: var(--mask-arc) 0 0;
+  will-change: transform;
+}
+.grid-mask__grid,
+.grid-mask__cross {
+  position: absolute;
+  inset: 0;
+}
+.grid-mask__grid {
+  background-image:
+    linear-gradient(var(--color-mask-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-mask-grid) 1px, transparent 1px);
+  background-size: var(--mask-grid-step) var(--mask-grid-step);
+}
+/* The "+" shape is a mask so its colour comes from the theme token. */
+.grid-mask__cross {
+  inset: -100vh 0;
+  background: var(--color-mask-mark);
+  --cross: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cpath d='M80 74v12M74 80h12' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
+  mask-image: var(--cross);
+  -webkit-mask-image: var(--cross);
+  mask-size: var(--mask-cross-step) var(--mask-cross-step);
+  -webkit-mask-size: var(--mask-cross-step) var(--mask-cross-step);
+}

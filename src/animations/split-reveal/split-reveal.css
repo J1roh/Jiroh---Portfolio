@@ -1,0 +1,14 @@
+.split-reveal__word {
+  display: inline-flex;
+  overflow: clip;
+  overflow-clip-margin: 0.12em;
+  padding-bottom: 0.06em;
+  margin-bottom: -0.06em;
+}
+.split-reveal__word:not(:last-child) { margin-right: 0.24em; }
+.split-reveal__char {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  will-change: transform;
+}

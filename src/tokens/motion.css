@@ -1,0 +1,14 @@
+/* Durations in ms and easings as cubic-bezier lists, so lib/motion/read-motion-token.ts can parse them for JS. */
+:root {
+  --motion-fast: 180;
+  --motion-base: 300;
+  --motion-reveal: 900;
+  --motion-stagger: 28;
+  --ease-out: 0.22, 1, 0.36, 1;
+  --ease-in-out: 0.65, 0, 0.35, 1;
+
+  --duration-fast: calc(var(--motion-fast) * 1ms);
+  --duration-base: calc(var(--motion-base) * 1ms);
+  --easing-out: cubic-bezier(var(--ease-out));
+  --easing-in-out: cubic-bezier(var(--ease-in-out));
+}

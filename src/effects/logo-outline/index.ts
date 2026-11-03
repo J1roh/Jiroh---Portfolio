@@ -1,0 +1,1 @@
+export { LogoOutline } from "./LogoOutline";

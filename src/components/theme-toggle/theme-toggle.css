@@ -1,0 +1,23 @@
+/* Not in Figma yet (owner, 2026-10-31): a 36px icon button in the nav pill, sized to match the label button. */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--easing-out), background var(--duration-fast) var(--easing-out);
+}
+.theme-toggle:hover {
+  color: var(--color-text);
+  background: var(--color-hairline);
+}
+.theme-toggle__icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

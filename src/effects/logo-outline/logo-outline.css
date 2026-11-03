@@ -1,0 +1,9 @@
+/* Stroke colour from the theme; the traced outline is the mask. */
+.logo-outline {
+  position: absolute;
+  background: var(--color-mask-ink);
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}

@@ -1,15 +1,15 @@
 import catalogue from "./catalogue.json";
-import garnier from "./media/work/garnier-email.jpg";
-import saltLab from "./media/work/salt-lab.png";
-import uniworld from "./media/work/uniworld-email.jpg";
-import dispatchEmail from "./media/work/dispatch-email.jpg";
-import billfish from "./media/work/billfish-gear.png";
-import cannondale from "./media/work/cannondale.jpg";
-import basketball from "./media/work/basketball.jpg";
+import garnier from "./media/work/garnier-email.webp";
+import saltLab from "./media/work/salt-lab.webp";
+import uniworld from "./media/work/uniworld-email.webp";
+import dispatchEmail from "./media/work/dispatch-email.webp";
+import billfish from "./media/work/billfish-gear.webp";
+import cannondale from "./media/work/cannondale.webp";
+import basketball from "./media/work/basketball.webp";
 import emailGif from "./media/work/email-test.gif";
-import nike from "./media/work/nike.png";
-import burger from "./media/work/best-burger.jpg";
-import dispatchLaunch from "./media/work/launch-creative-dispatch.jpg";
+import nike from "./media/work/nike.webp";
+import burger from "./media/work/best-burger.webp";
+import dispatchLaunch from "./media/work/launch-creative-dispatch.webp";
 import dayToGo from "./media/work/cs180-1-day-to-go.mp4";
 import dayToGoPoster from "./media/work/cs180-1-day-to-go-poster.jpg";
 import colloquium from "./media/work/cs-colloquium.mp4";
@@ -18,9 +18,9 @@ import logoSting from "./media/work/cs180-logo.mp4";
 import logoStingPoster from "./media/work/cs180-logo-poster.jpg";
 import billfishReel from "./media/work/reels-billfish.jpg";
 import webSite from "./media/work/web-site.jpg";
-import gameWinners from "./media/work/game-winners.png";
-import luauCode from "./media/work/luau-code.png";
-import gameCastle from "./media/work/game-castle.png";
+import gameWinners from "./media/work/game-winners.webp";
+import luauCode from "./media/work/luau-code.webp";
+import gameCastle from "./media/work/game-castle.webp";
 import type { CatalogueContent, WorkMedia } from "./types";
 
 /** Media files by the keys catalogue.json uses. Aspect is height / width. */

@@ -7,4 +7,5 @@ export const siteContent: SiteContent = site;
 export const heroContent: HeroContent = hero;
 /** logo-mark.png is 1702 × 1068. */
 export const brandMark: ImageContent = { src: logoMark, label: "Jiroh logo", aspect: 1068 / 1702 };
+export * from "./work";
 export type * from "./types";

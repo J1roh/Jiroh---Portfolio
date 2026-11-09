@@ -1,0 +1,28 @@
+/* Figma "Notification · Salt Lab": 456 × 128 glass card, two stack edges under it (416 × 10 at 70%, 376 × 8 at 40%). */
+.notice { display: grid; gap: var(--space-3); max-width: 28.5rem; }
+.notice__label, .notice__more { font-family: var(--font-mono); font-size: var(--text-micro); letter-spacing: var(--tracking-micro); text-transform: uppercase; color: var(--color-text-muted); }
+.notice__stack { position: relative; padding-bottom: 20px; }
+.notice__stack::before, .notice__stack::after {
+  content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  background: var(--color-surface); border: 1px solid var(--color-hairline); border-top: 0;
+}
+.notice__stack::before { bottom: 10px; width: calc(100% - 40px); height: 10px; opacity: 0.7; }
+.notice__stack::after { bottom: 0; width: calc(100% - 80px); height: 10px; opacity: 0.4; }
+.notice__card {
+  position: relative; z-index: 1;
+  display: flex; gap: var(--space-3); min-height: 8rem; padding: var(--space-4);
+  border-radius: 14px; border: 1px solid var(--color-hairline);
+  background: color-mix(in oklab, var(--color-surface) 85%, transparent);
+  backdrop-filter: blur(12px);
+}
+.notice__badge {
+  flex: none; display: grid; place-items: center; width: 28px; height: 28px;
+  border-radius: 7px; background: var(--color-steel); color: var(--color-white);
+  font-size: var(--text-micro); font-weight: var(--weight-bold);
+}
+.notice__text { flex: 1; display: grid; gap: var(--space-1); align-content: start; font-size: var(--text-md); }
+.notice__top { display: flex; justify-content: space-between; gap: var(--space-4); }
+.notice__top span { font-size: var(--text-micro); color: var(--color-text-muted); }
+.notice__subject { font-weight: var(--weight-medium); }
+.notice__preview { font-size: var(--text-sm); color: var(--color-text-muted); }

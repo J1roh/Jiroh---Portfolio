@@ -11,10 +11,10 @@ import saltLab from "./media/work/salt-lab.webp";
 import uniworld from "./media/work/uniworld-email.webp";
 import dispatchEmail from "./media/work/dispatch-email.webp";
 import nike from "./media/work/nike.webp";
-import phoneLock from "./media/work/phone-lock.png";
-import phoneOpen from "./media/work/phone-open.png";
-import phoneRead from "./media/work/phone-read.png";
-import phoneFooter from "./media/work/phone-footer.png";
+import phoneLock from "./media/work/phone-lock.webp";
+import phoneOpen from "./media/work/phone-open.webp";
+import phoneRead from "./media/work/phone-read.webp";
+import phoneFooter from "./media/work/phone-footer.webp";
 import type {
   ClientsContent, EmailsOpenContent, EnquireBandContent, ReelContent, ServicesContent, TestimonialsContent,
   ToolsContent, WorkContent,

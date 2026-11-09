@@ -1,0 +1,9 @@
+.section-head { display: grid; gap: var(--space-5); }
+.section-head__title {
+  max-width: 18ch;
+  font-size: var(--text-section);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-head);
+  letter-spacing: var(--tracking-display);
+}
+.section-head__line { max-width: 40ch; font-size: var(--text-lead); line-height: 1.4; color: var(--color-text-muted); }

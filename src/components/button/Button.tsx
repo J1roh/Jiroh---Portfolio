@@ -4,8 +4,8 @@ import "./button.css";
 type ButtonProps = {
   href: string;
   children: ReactNode;
-  /** solid: white block, body type. label: compact white block, mono caps. text: mono caps, no block. */
-  variant?: "solid" | "label" | "text";
+  /** solid: white block, body type. quiet: outlined, body type. label: compact white block, mono caps. text: mono caps, no block. */
+  variant?: "solid" | "quiet" | "label" | "text";
 };
 
 /** A link styled as a button. Navigation only; actions would get a <button> variant. */

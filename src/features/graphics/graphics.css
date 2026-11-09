@@ -1,0 +1,10 @@
+.graphics__grid { align-items: end; row-gap: var(--space-7); }
+.graphics__head { grid-column: 1 / 5; align-self: start; }
+.graphics__head .section-head__title { max-width: 10ch; }
+.graphics__item { margin: 0; }
+.graphics__item--0 { grid-column: 5 / 9; }
+.graphics__item--1 { grid-column: 9 / -1; }
+
+@media (max-width: 60rem) {
+  .graphics__item { grid-column: 1 / -1; }
+}

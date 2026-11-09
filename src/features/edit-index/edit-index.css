@@ -1,0 +1,33 @@
+.edit-index__table { width: 100%; margin-top: var(--space-8); border-collapse: collapse; }
+.edit-index__table th, .edit-index__table td {
+  padding: var(--space-5) var(--space-4) var(--space-5) 0;
+  border-bottom: 1px solid var(--color-hairline);
+  text-align: left;
+  vertical-align: middle;
+}
+.edit-index__table thead th { padding-block: var(--space-3); font-size: var(--text-sm); font-weight: var(--weight-regular); color: var(--color-text-muted); white-space: nowrap; }
+.edit-index__table tbody th { width: 50%; font-size: var(--text-title); font-weight: var(--weight-bold); letter-spacing: var(--tracking-brand); }
+.edit-index__table td { font-size: var(--text-body); color: var(--color-text-muted); }
+.edit-index__action { text-align: right; padding-right: 0; }
+.edit-index__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-color: var(--color-hairline);
+  text-underline-offset: 0.3em;
+  white-space: nowrap;
+  transition: text-decoration-color var(--duration-fast) var(--easing-out);
+}
+.edit-index__link:hover { text-decoration-color: var(--color-text); }
+.edit-index__link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+
+/* Phones: the project and its link stay; the form drops under the title. */
+@media (max-width: 40rem) {
+  .edit-index__table thead { display: none; }
+  .edit-index__table tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; border-bottom: 1px solid var(--color-hairline); padding-block: var(--space-4); }
+  .edit-index__table th, .edit-index__table td { border: 0; padding: 0; width: auto; }
+  .edit-index__table td:nth-child(2) { grid-row: 2; }
+  .edit-index__action { grid-row: 1 / 3; grid-column: 2; align-self: center; }
+}

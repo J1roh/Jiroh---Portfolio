@@ -1,4 +1,4 @@
-export const FX_NAMES = ["reveal", "magnetic", "camera", "smooth", "sculpture"] as const;
+export const FX_NAMES = ["reveal", "magnetic", "camera", "smooth", "sculpture", "loops"] as const;
 export type FxName = (typeof FX_NAMES)[number];
 export type FxFlags = Record<FxName, boolean>;
 

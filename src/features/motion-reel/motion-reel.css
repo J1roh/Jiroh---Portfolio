@@ -1,0 +1,4 @@
+.motion-reel__grid { margin-top: var(--space-8); row-gap: var(--space-7); }
+.motion-reel__item--0 { grid-column: 1 / -1; }
+.motion-reel__item--1 { grid-column: 1 / 8; }
+.motion-reel__item--2 { grid-column: 8 / -1; }

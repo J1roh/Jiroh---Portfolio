@@ -1,0 +1,44 @@
+/* Two tracks with their own gap (Stage posture): text 5, sheet 7, 64px apart. */
+.intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  column-gap: var(--space-8);
+  align-items: center;
+  min-height: calc(100svh - 68px);
+  padding-block: var(--space-7);
+  row-gap: var(--space-6);
+}
+.intro__text { grid-column: 1; display: grid; gap: var(--space-5); }
+.intro__title {
+  font-size: var(--text-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  max-width: 12ch;
+}
+.intro__line { max-width: 34ch; font-size: var(--text-lead); line-height: 1.4; color: var(--color-text-muted); }
+.intro__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-3); }
+
+/* The sheet: a tinted well, the email at its own 600px design width (scaled down only when the column is narrower), cut by the well's foot. */
+.intro__sheet {
+  grid-column: 2;
+  height: min(74svh, 720px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--space-7) var(--space-6) 0;
+}
+/* Two classes: tokens/layout.css loads after feature CSS (main.tsx import order), so `.frame > img` would win a tie. */
+.intro__sheet.frame > img {
+  width: min(100%, 480px);
+  height: auto;
+  object-fit: initial;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  box-shadow: 0 1px 2px color-mix(in oklab, var(--color-bg) 60%, transparent);
+}
+
+@media (max-width: 60rem) {
+  .intro__grid { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-block: var(--space-8) 0; }
+  .intro__text, .intro__sheet { grid-column: 1; }
+  .intro__sheet { height: 64svh; }
+}

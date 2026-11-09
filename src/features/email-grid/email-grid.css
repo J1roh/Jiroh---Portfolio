@@ -1,0 +1,16 @@
+.email-grid__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-8) var(--gap-columns);
+  margin-top: var(--space-8);
+  list-style: none;
+}
+.email-grid__link { display: block; border-radius: var(--radius-frame); }
+.email-grid__link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; }
+.email-grid__frame { aspect-ratio: 3 / 5; }
+.email-grid__frame > img { object-position: top center; }
+.email-grid__link:hover .email-grid__frame { outline-color: var(--color-steel); }
+
+@media (max-width: 60rem) {
+  .email-grid__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

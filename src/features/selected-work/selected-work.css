@@ -1,0 +1,35 @@
+/* Figma "Selected work": 96px head + chips, 640 × 440 cards 32 apart, progress + counter + All work. */
+.work { padding-top: var(--section-gap-s); }
+.work[data-pinned="true"] { height: 300svh; }
+.work__stage { display: grid; gap: var(--space-7); }
+.work[data-pinned="true"] .work__stage { position: sticky; top: 0; height: 100svh; align-content: center; overflow: clip; }
+.work__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--space-5); }
+.work__chips { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+.chip {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  display: inline-flex; align-items: center;
+  height: 36px; padding: 0 var(--space-4); border-radius: var(--radius-pill);
+  border: 1px solid var(--color-hairline); font-size: var(--text-sm); color: var(--color-text-muted);
+}
+.chip:hover { color: var(--color-text); border-color: var(--color-steel); }
+.chip[aria-pressed="true"] { background: var(--color-ink); color: var(--color-on-ink); border-color: var(--color-ink); }
+.chip:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.work[data-pinned="false"] .work__view { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding-bottom: var(--space-3); }
+.work__mover { width: max-content; }
+.work__track { display: flex; gap: var(--space-6); list-style: none; margin: 0; padding: 0; }
+.work__card { width: min(640px, 82vw); scroll-snap-align: start; transition: opacity var(--duration-base) var(--easing-out); }
+.work__card[data-dim="true"] { opacity: 0.3; }
+.work__link { display: grid; gap: var(--space-5); }
+.work__image { display: block; aspect-ratio: 640 / 440; }
+.work__image.frame > img { object-position: top; transition: transform var(--duration-reveal) var(--easing-out); }
+.work__link:hover .work__image > img { transform: scale(1.03); }
+.work__meta { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-5); align-items: start; }
+.work__num, .work__craft { padding-top: var(--space-2); font-family: var(--font-mono); font-size: var(--text-label); color: var(--color-steel); }
+.work__text { display: grid; gap: var(--space-1); }
+.work__title { font-size: var(--text-title-l); font-weight: var(--weight-bold); letter-spacing: var(--tracking-display); }
+.work__sub { color: var(--color-text-muted); }
+.work__foot { display: flex; align-items: center; gap: var(--space-6); }
+.work__progress { flex: 1; height: 2px; background: var(--color-hairline); }
+.work__fill { display: block; height: 100%; background: var(--color-ink); transform-origin: left; transition: transform var(--duration-base) var(--easing-out); }
+.work__count { font-family: var(--font-mono); font-size: var(--text-label); }
+.work__all { font-weight: var(--weight-bold); }

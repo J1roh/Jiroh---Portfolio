@@ -1,0 +1,397 @@
+{
+  "clients": {
+    "label": "Clients",
+    "via": "via Medialuv.",
+    "items": [
+      {
+        "name": "Garnier",
+        "viaMedialuv": true
+      },
+      {
+        "name": "Atlas Air",
+        "viaMedialuv": true
+      },
+      {
+        "name": "Thayers",
+        "viaMedialuv": true
+      },
+      {
+        "name": "Billfish Gear"
+      },
+      {
+        "name": "Dispatch"
+      },
+      {
+        "name": "Bon Maxie"
+      },
+      {
+        "name": "Amazon"
+      },
+      {
+        "name": "Uniworld"
+      }
+    ]
+  },
+  "reel": {
+    "head": "Showreel",
+    "play": "Play showreel",
+    "pause": "Pause",
+    "close": "Close",
+    "prev": "Previous reel",
+    "next": "Next reel",
+    "nextLabel": "next",
+    "items": [
+      {
+        "title": "Showreel 2026",
+        "label": "CS 180 “1 day to go” countdown, standing in for the 2026 showreel (owner: TBD)"
+      },
+      {
+        "title": "Reels and video edits",
+        "label": "Billfish Gear reel still"
+      },
+      {
+        "title": "Motion graphics",
+        "label": "CS Colloquium title still"
+      },
+      {
+        "title": "Launch creative",
+        "label": "Dispatch launch creative"
+      }
+    ]
+  },
+  "work": {
+    "head": "Selected work",
+    "mark": "©26",
+    "filtersLabel": "Filter by craft",
+    "all": "All",
+    "allWork": {
+      "label": "All work",
+      "href": "#work"
+    },
+    "items": [
+      {
+        "slug": "garnier-emails",
+        "title": "Email Campaigns",
+        "sub": "Garnier, via Medialuv.",
+        "craft": "Email",
+        "label": "Garnier Fructis and Nutrisse email"
+      },
+      {
+        "slug": "reels-and-video",
+        "title": "Reels and video edits",
+        "sub": "Short and long form",
+        "craft": "Video",
+        "label": "Billfish Gear reel still"
+      },
+      {
+        "slug": "dispatch-launch",
+        "title": "Launch creative",
+        "sub": "Dispatch",
+        "craft": "Graphic",
+        "label": "Dispatch “Hop to it” launch creative"
+      },
+      {
+        "slug": "game-development",
+        "title": "Game development",
+        "sub": "Games and prototypes",
+        "craft": "Games",
+        "label": "Luau code from a Roblox game"
+      },
+      {
+        "slug": "cs180-motion",
+        "title": "Motion graphics",
+        "sub": "CS 180 Student Research",
+        "craft": "Motion",
+        "label": "CS 180 “1 day to go” motion still"
+      },
+      {
+        "slug": "websites",
+        "title": "Web development",
+        "sub": "Websites I built",
+        "craft": "Web",
+        "label": "A website Jiroh built, Japanese to English"
+      }
+    ]
+  },
+  "emails": {
+    "head": "Emails people open",
+    "line": "Four launches, from the moment they land to the last line.",
+    "notificationsLabel": "Notifications",
+    "now": "now",
+    "more": "+3 more",
+    "steps": [
+      "Arrives",
+      "Opens",
+      "Reading",
+      "The last line"
+    ],
+    "open": "Open full email",
+    "items": [
+      {
+        "brand": "Salt Lab",
+        "initials": "SL",
+        "subject": "“Come back to the ritual”",
+        "preview": "It’s been a while—here’s $50 towards…",
+        "type": "Win-back · $50 gift card",
+        "label": "Salt Lab win-back email, its $50 gift card offer at the top"
+      },
+      {
+        "brand": "Uniworld",
+        "initials": "UN",
+        "subject": "",
+        "preview": "",
+        "type": "Launch email",
+        "label": "Uniworld email"
+      },
+      {
+        "brand": "Dispatch",
+        "initials": "DI",
+        "subject": "",
+        "preview": "",
+        "type": "Launch email",
+        "label": "Dispatch email"
+      },
+      {
+        "brand": "Garnier",
+        "initials": "GA",
+        "subject": "",
+        "preview": "",
+        "type": "Campaign email, via Medialuv.",
+        "label": "Garnier Fructis and Nutrisse email"
+      }
+    ]
+  },
+  "services": {
+    "head": "What I make",
+    "mark": "©26",
+    "line": "Six crafts, one desk.",
+    "items": [
+      {
+        "title": "Email design",
+        "body": "Launch and lifecycle emails, built to render."
+      },
+      {
+        "title": "Graphic design",
+        "body": "Ads, posters and brand books."
+      },
+      {
+        "title": "Motion graphics",
+        "body": "Titles, countdowns and logo stings."
+      },
+      {
+        "title": "Video editing",
+        "body": "Short and long form, cut for the feed."
+      },
+      {
+        "title": "Web development",
+        "body": "Sites like this one, fast and hand-built."
+      },
+      {
+        "title": "Game development",
+        "body": "Small games people replay."
+      }
+    ],
+    "glyphs": "#%&*+=<>/?!0123456789"
+  },
+  "tools": {
+    "head": "Tools",
+    "mark": "©26",
+    "line": "What the work is made with.",
+    "unit": "tools",
+    "groups": [
+      {
+        "title": "Design and motion",
+        "tools": [
+          [
+            "Pr",
+            "Premiere Pro"
+          ],
+          [
+            "Ae",
+            "After Effects"
+          ],
+          [
+            "Ps",
+            "Photoshop"
+          ],
+          [
+            "Fi",
+            "Figma"
+          ],
+          [
+            "Cv",
+            "Canva"
+          ],
+          [
+            "Bl",
+            "Blender"
+          ],
+          [
+            "Ai",
+            "Illustrator"
+          ],
+          [
+            "Cc",
+            "CapCut"
+          ],
+          [
+            "Fr",
+            "Frame.io"
+          ]
+        ]
+      },
+      {
+        "title": "Build",
+        "tools": [
+          [
+            "VS",
+            "VS Code"
+          ],
+          [
+            "H5",
+            "HTML"
+          ],
+          [
+            "C3",
+            "CSS"
+          ],
+          [
+            "Tw",
+            "Tailwind"
+          ],
+          [
+            "TS",
+            "TypeScript"
+          ],
+          [
+            "Re",
+            "React"
+          ],
+          [
+            "Vi",
+            "Vite"
+          ],
+          [
+            "Mo",
+            "Motion"
+          ],
+          [
+            "Sb",
+            "Supabase"
+          ],
+          [
+            "Gh",
+            "GitHub"
+          ],
+          [
+            "Nx",
+            "Next.js"
+          ],
+          [
+            "GS",
+            "GSAP"
+          ],
+          [
+            "Nd",
+            "Node.js"
+          ],
+          [
+            "Un",
+            "Unity"
+          ]
+        ]
+      },
+      {
+        "title": "Email",
+        "tools": [
+          [
+            "Kl",
+            "Klaviyo"
+          ],
+          [
+            "Lt",
+            "Litmus"
+          ]
+        ]
+      },
+      {
+        "title": "AI",
+        "tools": [
+          [
+            "Cl",
+            "Claude"
+          ],
+          [
+            "Ge",
+            "Gemini"
+          ],
+          [
+            "GPT",
+            "ChatGPT"
+          ],
+          [
+            "Cu",
+            "Cursor"
+          ],
+          [
+            "Rw",
+            "Runway"
+          ],
+          [
+            "El",
+            "ElevenLabs"
+          ]
+        ]
+      },
+      {
+        "title": "Workflow",
+        "tools": [
+          [
+            "Sl",
+            "Slack"
+          ],
+          [
+            "Tr",
+            "Trello"
+          ],
+          [
+            "Rb",
+            "Redbooth"
+          ],
+          [
+            "No",
+            "Notion"
+          ],
+          [
+            "Di",
+            "Discord"
+          ]
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "head": "Kind words",
+    "mark": "©26",
+    "items": [],
+    "prev": "Previous quote",
+    "next": "Next quote"
+  },
+  "enquire": {
+    "eyebrow": "Enquire",
+    "mark": "©26",
+    "head": "Got a launch?",
+    "line": "Send the brief; I’ll come back with a plan and a quote.",
+    "steps": [
+      "Send the brief",
+      "Get a plan and a quote",
+      "Launch it together"
+    ],
+    "cta": {
+      "label": "Start an enquiry",
+      "href": "mailto:contact@jiroh.works"
+    },
+    "art": "LET'S TALK",
+    "glyphs": "$%&#@*+=WM8B"
+  }
+}

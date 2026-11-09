@@ -1,5 +1,7 @@
 /* Index ledger footer (Figma "2 · Index ledger · 1440"). */
-.site-footer { margin-top: var(--section-gap); padding-block: var(--space-8) var(--space-7); border-top: 1px solid var(--color-hairline); }
+.site-footer {
+  position: relative;
+  background: var(--color-bg); margin-top: var(--section-gap); padding-block: var(--space-8) var(--space-7); border-top: 1px solid var(--color-hairline); }
 .site-footer__label,
 .site-footer__mark,
 .site-footer__top {

@@ -9,6 +9,10 @@
   --text-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem); /* 18: hero paragraph */
   --text-brand: 1.125rem;
   --text-hook: clamp(3rem, 1.2rem + 5.35vw, 6rem); /* 96 at 1440 (Figma Hero v3) */
+  --text-title-l: clamp(1.5rem, 1.2rem + 0.9vw, 2rem); /* 32 at 1440: card titles */
+  --text-row: clamp(2.25rem, 1.2rem + 3.3vw, 4.5rem); /* 72 at 1440: service rows */
+  --text-marquee: clamp(2.75rem, 1.6rem + 4vw, 5.5rem); /* 88 at 1440: client names */
+  --text-head-xl: clamp(3rem, 1.4rem + 5.1vw, 6rem); /* 96 at 1440: v4.1 section heads */
   --text-poster: clamp(3.5rem, 1rem + 9.3vw, 9.375rem); /* 150 at 1440 (Figma Hero G) */
 
   --weight-regular: 400;

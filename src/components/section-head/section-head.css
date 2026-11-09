@@ -7,3 +7,29 @@
   letter-spacing: var(--tracking-display);
 }
 .section-head__line { max-width: 40ch; font-size: var(--text-lead); line-height: 1.4; color: var(--color-text-muted); }
+
+/* Display: the v4.1 heads ("Selected work ©26", "Tools ©26"), line bottom-right. */
+.section-head--display {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  column-gap: var(--space-6);
+}
+.section-head--display .section-head__title {
+  max-width: none;
+  font-size: var(--text-head-xl);
+  line-height: var(--leading-hook);
+  letter-spacing: var(--tracking-hook);
+}
+.section-head__mark {
+  margin-left: var(--space-2);
+  font-size: 0.33em;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0;
+  vertical-align: super;
+  color: var(--color-text-muted);
+}
+.section-head--display .section-head__line { max-width: 28ch; font-size: var(--text-body); text-align: right; }
+@media (max-width: 60rem) {
+  .section-head--display { grid-template-columns: minmax(0, 1fr); }
+  .section-head--display .section-head__line { text-align: left; }
+}

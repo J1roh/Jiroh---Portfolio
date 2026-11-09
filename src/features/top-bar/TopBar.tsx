@@ -18,7 +18,7 @@ export function TopBar({ content }: { content: SiteContent }) {
             ))}
           </ul>
           <ThemeToggle theme={theme} onToggle={toggle} labels={content.theme} />
-          <Button href={content.cta.href} variant="quiet">{content.cta.label}</Button>
+          <Button href={content.cta.href} arrow>{content.cta.label}</Button>
         </nav>
       </div>
     </header>

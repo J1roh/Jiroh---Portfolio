@@ -15,7 +15,12 @@
 ## Next
 - [ ] Owner: hero words per craft are assumed (emails, ads, animations, videos, websites, games); confirm in `content/work.json` → `statement`
 - [ ] Owner: Web backdrop for the hero (none yet, shows the plain canvas); Video uses the CS Colloquium still for now
-- [ ] Rebuild the rest of Home to Figma v4.1: nav (Work, Services, About, Enquire), clients marquee, reel grow with side reels, Selected work track, Emails A v3, Services, Tools, Testimonials, Enquire band D
+- [x] Home rebuilt to Figma v4.1 (2026-11-09): nav, clients marquee, reel grow, Selected work track, Emails A v3, Services, Tools, Testimonials (hidden until real quotes), Enquire band D, footer ledger, glyph backdrop
+- [ ] Owner: delete the uncomposed old features? (intro, email-grid, motion-reel, graphics, edit-index, contact)
+- [ ] Owner: About is out of the nav until you decide: a page, a Home section, or drop it
+- [ ] Owner: the 2026 showreel video; CS 180 "1 day to go" stands in
+- [ ] Owner: subject lines for Uniworld, Dispatch, Garnier emails (only Salt Lab's is shown)
+- [ ] Owner: real testimonials (section hidden while `testimonials.items` is empty in content/home.json)
 - [x] 2026-11-07 rebuild (Hallmark): new page from the Drive work; sloplint 0 FAIL
 - [ ] Owner: approve deleting the unused ASCII hero stack (`features/hero`, `features/site-nav`, `effects/*`, `animations/*`, `content/hero.json`, `content/3d/`); none of them is composed any more
 - [x] Contact email: contact@jiroh.works (nav, hero and contact close, 2026-11-07)

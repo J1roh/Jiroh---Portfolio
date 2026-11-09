@@ -2,25 +2,17 @@
   "brand": "Jiroh",
   "nav": [
     {
-      "label": "Emails",
-      "href": "#emails"
+      "label": "Work",
+      "href": "#work"
     },
     {
-      "label": "Motion",
-      "href": "#motion"
-    },
-    {
-      "label": "Graphics",
-      "href": "#graphics"
-    },
-    {
-      "label": "Video",
-      "href": "#video"
+      "label": "Services",
+      "href": "#services"
     }
   ],
   "cta": {
-    "label": "Email me",
-    "href": "mailto:contact@jiroh.works"
+    "label": "Enquire",
+    "href": "#enquire"
   },
   "theme": {
     "toLight": "Switch to light mode",

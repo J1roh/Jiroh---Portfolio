@@ -1,0 +1,54 @@
+/* Figma "Reel grow": centre 1120 × 630 (radius 8), neighbours peek 128px at the edges; bar under it. */
+.reel { --reel-w: min(1120px, calc(100vw - 2 * var(--gutter))); padding-top: var(--space-6); overflow: clip; }
+.reel[data-pinned="true"] { height: 200svh; }
+.reel__stage { --grow: 0; display: grid; align-content: center; gap: var(--space-6); }
+.reel[data-pinned="true"] .reel__stage { position: sticky; top: 0; height: 100svh; }
+.reel__row { position: relative; display: flex; justify-content: center; }
+.reel__centre {
+  position: relative; margin: 0; overflow: clip;
+  width: calc(var(--reel-w) + (100vw - var(--reel-w)) * var(--grow));
+  aspect-ratio: 16 / 9;
+  max-height: calc(100svh - 120px + 120px * var(--grow));
+  border-radius: calc(var(--radius-md) * (1 - var(--grow)));
+  background: var(--color-surface);
+}
+.reel__media { display: block; width: 100%; height: 100%; object-fit: cover; }
+.reel__side {
+  position: absolute; top: 0; height: 100%; width: var(--reel-w);
+  object-fit: cover; border-radius: var(--radius-md);
+  opacity: calc(0.6 * (1 - var(--grow)));
+}
+.reel__side--prev { right: calc(50% + var(--reel-w) / 2 + var(--space-6) + 160px * var(--grow)); }
+.reel__side--next { left: calc(50% + var(--reel-w) / 2 + var(--space-6) + 160px * var(--grow)); }
+.reel__play {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  position: absolute; left: var(--space-6); bottom: var(--space-6);
+  display: inline-flex; align-items: center; gap: var(--space-4);
+  height: 48px; padding: 0 var(--space-1) 0 var(--space-5);
+  border-radius: var(--radius-pill); background: var(--color-ink); color: var(--color-on-ink);
+  font-size: var(--text-md); font-weight: var(--weight-medium);
+}
+.reel__play:focus-visible, .reel__arrow:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.reel__play-chip {
+  display: inline-grid; place-items: center; width: 36px; height: 36px;
+  border-radius: var(--radius-pill); background: var(--color-on-ink); color: var(--color-ink);
+}
+.reel__bar {
+  display: flex; align-items: center; gap: var(--space-5);
+  width: var(--reel-w); padding: 0; opacity: calc(1 - var(--grow));
+  font-size: var(--text-sm);
+}
+.reel__count { font-family: var(--font-mono); }
+.reel__title { color: var(--color-text-muted); }
+.reel__arrows { margin-left: auto; display: flex; gap: var(--space-3); }
+.reel__arrow {
+  all: unset; box-sizing: border-box; cursor: pointer;
+  display: grid; place-items: center; width: 48px; height: 48px;
+  border-radius: var(--radius-pill); border: 1px solid var(--color-hairline);
+  background: color-mix(in oklab, var(--color-ink) 6%, transparent);
+}
+.reel__arrow:hover { border-color: var(--color-steel); }
+@media (max-width: 60rem) {
+  .reel__title { display: none; }
+  .reel__side { display: none; }
+}

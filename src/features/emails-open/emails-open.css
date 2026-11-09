@@ -1,0 +1,47 @@
+/* Figma "Emails · From notification to open": head + notification left, 3D phone centre, details right. */
+.emails { padding-top: var(--section-gap); }
+.emails[data-pinned="true"] { height: 320svh; }
+.emails__stage {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr);
+  align-items: center;
+  gap: var(--space-6);
+}
+.emails[data-pinned="true"] .emails__stage { position: sticky; top: 0; height: 100svh; }
+.emails__intro { display: grid; gap: var(--space-7); align-self: start; padding-top: var(--space-8); }
+.emails__phone { position: relative; margin: 0; aspect-ratio: 1000 / 1100; transform: scale(1.15); }
+.emails__spot { position: absolute; inset: -15%; background: radial-gradient(closest-side, color-mix(in oklab, var(--color-steel) 35%, transparent), transparent); pointer-events: none; }
+.emails__state {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+  opacity: 0; transition: opacity var(--duration-base) var(--easing-out);
+}
+.emails__state[data-on="true"] { opacity: 1; }
+.emails__info { display: grid; gap: var(--space-2); padding-left: var(--space-5); border-left: 2px solid var(--color-ink); }
+.emails__count, .emails__step { font-family: var(--font-mono); font-size: var(--text-label); color: var(--color-steel); }
+.emails__brand { font-size: var(--text-title); font-weight: var(--weight-bold); }
+.emails__type { color: var(--color-text-muted); font-size: var(--text-sm); }
+.emails__step { margin-top: var(--space-5); color: var(--color-tint); text-transform: uppercase; }
+.emails__open { margin-top: var(--space-5); font-weight: var(--weight-medium); border-bottom: 1px solid var(--color-hairline); justify-self: start; }
+
+.notice { display: grid; gap: var(--space-3); max-width: 360px; }
+.notice__label, .notice__more { font-family: var(--font-mono); font-size: var(--text-micro); letter-spacing: var(--tracking-micro); text-transform: uppercase; color: var(--color-steel); }
+.notice__card {
+  display: flex; gap: var(--space-3); padding: var(--space-4);
+  border-radius: var(--radius-md); border: 1px solid var(--color-hairline);
+  background: color-mix(in oklab, var(--color-surface) 80%, transparent);
+  backdrop-filter: blur(8px);
+}
+.notice__badge {
+  flex: none; display: grid; place-items: center; width: 28px; height: 28px;
+  border-radius: var(--radius-sm); background: var(--color-steel); color: var(--color-ink);
+  font-size: var(--text-micro); font-weight: var(--weight-bold);
+}
+.notice__text { display: grid; gap: var(--space-1); font-size: var(--text-sm); }
+.notice__top { display: flex; justify-content: space-between; gap: var(--space-4); }
+.notice__top span, .notice__preview { color: var(--color-text-muted); }
+
+@media (max-width: 60rem) {
+  .emails__stage { grid-template-columns: minmax(0, 1fr); }
+  .emails__intro { padding-top: 0; }
+  .emails__phone { max-width: 420px; justify-self: center; width: 100%; }
+}

@@ -51,13 +51,28 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 | `section-head` | `<SectionHead content id className />`: a section's h2 (its `id` labels the section) and the one line under it |
 | `loop-video` | `<LoopVideo src poster label labels enabled />`: muted loop that plays only on screen and not paused, with a Pause/Play button; off shows the poster |
 
+### Added 2026-11-09
+| Module | Public API |
+|---|---|
+| `animations/time-scramble` | `<TimeScramble text glyphs play enabled />`: scroll-scramble driven by time, replays when `play` changes |
+| `effects/ascii-type-field` | `<AsciiTypeField text glyphs enabled />`: one canvas of glyphs where `text` reads out brighter; churns slowly, glows near the pointer |
+| `effects/glyph-backdrop` | `<GlyphBackdrop glyphs />`: the fixed, faint ASCII rows behind the page, drawn once per resize |
+
 ## L3 Features — `src/features/`
 | Feature | Input | Composes |
 |---|---|---|
 | `top-bar` | `SiteContent` | button, theme-toggle, lib/theme: edge-aligned bar, wordmark, section links, one action |
 | `hero-statement` | `StatementContent`, `motion` | button, scroll-scramble: the first screen (Figma "Hero · big type + craft list (G)", 2026-11-09). Craft's work full-bleed, "I make [word] that sell." bottom left, craft list top right, timed tabs at the foot. `use-craft-cycle.ts` (the 2.4 s cycle), `CraftWord.tsx` (the scrambling word), `CraftPicker.tsx` (list and tabs, one choice) are hero-statement only |
 | `intro` (not composed since 2026-11-09) | `IntroContent` | button: the Stage hero, hook and a real email on its sheet |
-| `email-grid` | `EmailsContent` | section-head: four emails cropped to their top, each linking to the full file |
+| `clients-marquee` | `ClientsContent`, `moving` | the client names row; loops left, pauses on hover; "via Medialuv." credits |
+| `reel-grow` | `ReelContent`, `pinned` | lib/scroll: centre reel with neighbours peeking, counter and arrows; pinned, the centre grows full-bleed. `ReelStage.tsx` (the three reels and Play) is reel-grow only |
+| `selected-work` | `WorkContent`, `pinned` | section-head, lib/scroll, lib/viewport: six cards on a sideways track pinned to scroll, craft chips, progress and counter. `WorkCards.tsx` is selected-work only |
+| `emails-open` | `EmailsOpenContent`, `pinned` | section-head, lib/scroll: one email's life on the 3D phone, stepped by scroll. `Notification.tsx` is emails-open only |
+| `services` | `ServicesContent`, `motion` | section-head, time-scramble: six craft rows; hover or focus scrambles the title and shows that craft's work |
+| `tools` | `ToolsContent` | section-head: five tool groups with counts and badge chips |
+| `testimonials` | `TestimonialsContent` | section-head: one quote at a time with arrows; renders nothing while content has no quotes |
+| `enquire-band` | `EnquireBandContent`, `motion` | button, ascii-type-field: the close, the ask and three steps beside "LET'S TALK" in glyphs |
+| `email-grid` (not composed since 2026-11-09) | `EmailsContent` | section-head: four emails cropped to their top, each linking to the full file |
 | `motion-reel` | `MotionContent`, `play` | section-head, loop-video: lead clip across, then a 7 / 5 pair |
 | `graphics` | `GraphicsContent` | section-head: head beside two posters |
 | `edit-index` | `EditsContent` | section-head: table of edited videos with Drive links |
@@ -69,4 +84,4 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 ## L4 Pages — `src/pages/`
 | Page | Responsibility |
 |---|---|
-| `Home.tsx` | Reads fx flags and reduced motion, starts smooth scroll, composes top-bar → hero-statement → email-grid → motion-reel → graphics → edit-index → contact → site-footer (2026-11-07 rebuild; hero-statement replaced intro 2026-11-09) |
+| `Home.tsx` | Reads fx flags and reduced motion, starts smooth scroll, composes glyph-backdrop, top-bar → hero-statement → clients-marquee → reel-grow → selected-work → emails-open → services → tools → testimonials → enquire-band → site-footer (Figma Home v4.1) (2026-11-07 rebuild; hero-statement replaced intro 2026-11-09) |

@@ -5,7 +5,7 @@ body {
   font-size: var(--text-md);
   line-height: var(--leading-normal);
   color: var(--color-text);
-  background: var(--color-bg);
+  /* No body background: html carries the canvas colour so the fixed glyph backdrop (z -1) shows through. */
   -webkit-font-smoothing: antialiased;
 }
 :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }

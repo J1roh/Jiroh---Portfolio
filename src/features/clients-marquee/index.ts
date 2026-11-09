@@ -1,0 +1,1 @@
+export { ClientsMarquee } from "./ClientsMarquee";

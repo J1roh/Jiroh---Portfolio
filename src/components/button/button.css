@@ -1,9 +1,10 @@
-/* Figma "Hero v2": ink blocks (white on dark, navy on light) with on-ink text, radius 4; mono caps for labels. */
+/* Figma v4.1: ink pills (white on dark, navy on light); the arrow variant ends in a round chip. */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-sm);
+  gap: var(--space-4);
+  border-radius: var(--radius-pill);
   white-space: nowrap;
   transition: background var(--duration-fast) var(--easing-out), color var(--duration-fast) var(--easing-out);
 }
@@ -46,3 +47,15 @@
 .button--quiet:hover { border-color: var(--color-steel); }
 .button:active { transform: translateY(1px); }
 @media (prefers-reduced-motion: reduce) { .button:active { transform: none; } }
+
+/* Arrow pills: label, then a 36px round chip with ↗ (Figma "Start an enquiry", "See the work"). */
+.button--arrow { height: 48px; padding: 0 var(--space-1) 0 var(--space-5); }
+.button__chip {
+  display: inline-grid; place-items: center;
+  width: 36px; height: 36px; border-radius: var(--radius-pill);
+  background: var(--color-on-ink); color: var(--color-ink);
+  font-size: var(--text-md);
+  transition: transform var(--duration-fast) var(--easing-out);
+}
+.button--quiet .button__chip { background: var(--color-surface); color: var(--color-text); }
+.button--arrow:hover .button__chip { transform: rotate(45deg); }

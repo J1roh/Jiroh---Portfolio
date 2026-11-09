@@ -1,0 +1,18 @@
+/* Figma "Clients marquee": 88px names, 22px credits, steel slashes; loops left, pauses on hover. */
+.clients { overflow: clip; padding-block: var(--space-8); border-block: 1px solid var(--color-hairline); }
+.clients__track { display: flex; width: max-content; }
+.clients[data-moving="true"] .clients__track { animation: clients-loop 48s linear infinite; }
+.clients[data-moving="true"]:hover .clients__track { animation-play-state: paused; }
+.clients[data-moving="false"] .clients__track { width: auto; padding-inline: var(--gutter); }
+.clients[data-moving="false"] .clients__row { flex-wrap: wrap; }
+.clients__row { display: flex; align-items: baseline; list-style: none; margin: 0; padding: 0; }
+.clients__item { display: flex; align-items: baseline; gap: var(--space-4); padding-right: var(--space-6); white-space: nowrap; }
+.clients__name {
+  font-size: var(--text-marquee);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-hook);
+  line-height: 1.1;
+}
+.clients__via { font-size: var(--text-lead); color: var(--color-text-muted); }
+.clients__slash { padding-left: var(--space-5); font-size: var(--text-marquee); font-weight: var(--weight-regular); color: var(--color-hairline); }
+@keyframes clients-loop { from { transform: translateX(0); } to { transform: translateX(-50%); } }

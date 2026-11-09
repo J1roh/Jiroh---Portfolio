@@ -1,0 +1,16 @@
+/* Figma "Enquire band · ASCII (Concept D)", 1440 × 720: text 5 cols left, the glyph field 7 cols right. */
+.enquire-band { margin-top: var(--section-gap); padding-block: var(--space-9); background: var(--color-bg); overflow: clip; }
+.enquire-band__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-6); align-items: center; }
+.enquire-band__text { display: grid; gap: var(--space-5); align-content: center; }
+.enquire-band__eyebrow { font-size: var(--text-sm); color: var(--color-text-muted); }
+.enquire-band__eyebrow span { font-size: var(--text-micro); vertical-align: super; }
+.enquire-band__title { font-size: var(--text-head-xl); font-weight: var(--weight-bold); line-height: var(--leading-hook); letter-spacing: var(--tracking-hook); }
+.enquire-band__line { max-width: 34ch; color: var(--color-text-muted); }
+.enquire-band__steps { display: grid; gap: var(--space-3); list-style: none; margin: 0 0 var(--space-4); padding: 0; }
+.enquire-band__steps li { display: flex; gap: var(--space-5); }
+.enquire-band__num { font-family: var(--font-mono); font-size: var(--text-label); color: var(--color-steel); padding-top: 2px; }
+.enquire-band__art { height: min(560px, 60vw); }
+@media (max-width: 60rem) {
+  .enquire-band__grid { grid-template-columns: minmax(0, 1fr); }
+  .enquire-band__art { height: 240px; }
+}

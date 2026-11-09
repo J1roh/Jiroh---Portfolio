@@ -1,8 +1,8 @@
 import { useState, type CSSProperties } from "react";
 import type { StatementContent } from "@content/index";
+import { TimeScramble } from "../../animations/time-scramble";
 import { Button } from "../../components/button";
 import { CraftPicker } from "./CraftPicker";
-import { CraftWord } from "./CraftWord";
 import { useCraftCycle } from "./use-craft-cycle";
 import "./hero-statement.css";
 
@@ -41,14 +41,14 @@ export function HeroStatement({ content, motion }: HeroStatementProps) {
       <div className="container statement__inner">
         <div className="statement__list" {...hold}><CraftPicker {...picker} variant="list" /></div>
         <h1 id="statement-title" className="statement__title">
-          {content.lead} <CraftWord word={craft.word} glyphs={content.glyphs} enabled={motion} />
+          {content.lead} <TimeScramble text={craft.word} glyphs={content.glyphs} play={index} className="statement__word" enabled={motion} />
           <br />{content.tail}
         </h1>
         <div className="statement__row">
           <p className="statement__line">{content.line}</p>
           <div className="statement__actions">
-            <Button href={content.primary.href}>{content.primary.label}</Button>
-            <Button href={content.secondary.href} variant="quiet">{content.secondary.label}</Button>
+            <Button href={content.primary.href} arrow>{content.primary.label}</Button>
+            <Button href={content.secondary.href} variant="quiet" arrow>{content.secondary.label}</Button>
           </div>
         </div>
         <div className="statement__tabs" {...hold}><CraftPicker {...picker} variant="tabs" /></div>

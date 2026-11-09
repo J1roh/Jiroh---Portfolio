@@ -5,3 +5,10 @@ dist
 .playwright-mcp/
 graphify-out/
 .claude/settings.local.json
+
+# Hallmark render artifacts
+.hallmark/shots/
+.hallmark/shipped.css
+
+# Doctor backups
+*.bak-doctor

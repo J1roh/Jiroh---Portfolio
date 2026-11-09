@@ -1,0 +1,33 @@
+[
+ {
+  "shape": "index-led portfolio",
+  "theme": "design.md (locked)",
+  "axes": {
+   "paper": "navy",
+   "type": "Geist",
+   "accent": "none"
+  },
+  "hero": "Stage",
+  "nav": "edge-aligned",
+  "footer": "mast",
+  "imagery": "owner work 11 files",
+  "photos": [],
+  "entry": "none",
+  "fingerprint": "stage|grid|showcase|split|table|statement",
+  "sections": [
+   "Stage hero",
+   "Grid (emails)",
+   "Showcase (motion)",
+   "Split (graphics)",
+   "Table (video)",
+   "Statement close"
+  ],
+  "signature": "real email at native width on a sheet",
+  "waived": [
+   "7b"
+  ],
+  "prompt": "rebuild my website from scratch. simplicity yet shows my skills",
+  "date": "2026-11-07",
+  "mode": "build"
+ }
+]

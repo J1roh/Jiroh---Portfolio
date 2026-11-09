@@ -48,14 +48,24 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 | `surface-panel` | `<SurfacePanel as className label />`: raised navy panel with a hairline edge |
 | `button` | `<Button href variant="solid" \| "label" \| "text" />`: link styled as a button |
 | `theme-toggle` | `<ThemeToggle theme onToggle labels />`: sun/moon icon button that flips light and dark |
+| `section-head` | `<SectionHead content id className />`: a section's h2 (its `id` labels the section) and the one line under it |
+| `loop-video` | `<LoopVideo src poster label labels enabled />`: muted loop that plays only on screen and not paused, with a Pause/Play button; off shows the poster |
 
 ## L3 Features — `src/features/`
 | Feature | Input | Composes |
 |---|---|---|
-| `site-nav` | `SiteContent`, `SiteNavFx` | surface-panel, button, theme-toggle, lib/theme, magnetic, scroll-hide |
-| `hero` | `HeroContent`, `ImageContent` (logo), `HeroFx` | button, split-reveal, scroll-camera, scroll-slide, scroll-rise, scroll-scramble, ascii-sculpture, lib/scroll; `ServiceRail.tsx` (bottom strip that retypes the logo per service; hidden for now by `SERVICE_RAIL`) `HeroCameraStage.tsx` (the pinned pan → small zoom-out → ripple → close sequence) and `HeroTransition.tsx` (the closing grid mask, logo line art and intro copy) are hero-only; also composes grid-mask, logo-outline, scroll-rise |
+| `top-bar` | `SiteContent` | button, theme-toggle, lib/theme: edge-aligned bar, wordmark, section links, one action |
+| `intro` | `IntroContent` | button: the Stage hero, hook and a real email on its sheet |
+| `email-grid` | `EmailsContent` | section-head: four emails cropped to their top, each linking to the full file |
+| `motion-reel` | `MotionContent`, `play` | section-head, loop-video: lead clip across, then a 7 / 5 pair |
+| `graphics` | `GraphicsContent` | section-head: head beside two posters |
+| `edit-index` | `EditsContent` | section-head: table of edited videos with Drive links |
+| `contact` | `ContactContent` | the close: the ask, the address (TBD), what Jiroh makes |
+| `site-footer` | `FooterContent`, nav `Link[]`, cta `Link`, `ContactContent` | index ledger: the address large over numbered link columns (Sections, Contact, Elsewhere when filled; no eyebrow or services, those live in the contact close), base row with wordmark, note, back to top (Figma "2 · Index ledger", 2026-11-09) |
+| `site-nav` (not composed since 2026-11-07) | `SiteContent`, `SiteNavFx` | surface-panel, button, theme-toggle, lib/theme, magnetic, scroll-hide |
+| `hero` (not composed since 2026-11-07) | `HeroContent`, `ImageContent` (logo), `HeroFx` | button, split-reveal, scroll-camera, scroll-slide, scroll-rise, scroll-scramble, ascii-sculpture, lib/scroll; `ServiceRail.tsx` (bottom strip that retypes the logo per service; hidden for now by `SERVICE_RAIL`) `HeroCameraStage.tsx` (the pinned pan → small zoom-out → ripple → close sequence) and `HeroTransition.tsx` (the closing grid mask, logo line art and intro copy) are hero-only; also composes grid-mask, logo-outline, scroll-rise |
 
 ## L4 Pages — `src/pages/`
 | Page | Responsibility |
 |---|---|
-| `Home.tsx` | Reads fx flags and reduced motion, starts smooth scroll, composes nav → hero → placeholder |
+| `Home.tsx` | Reads fx flags and reduced motion, starts smooth scroll, composes top-bar → intro → email-grid → motion-reel → graphics → edit-index → contact → site-footer (2026-11-07 rebuild) |

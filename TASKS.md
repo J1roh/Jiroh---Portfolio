@@ -8,13 +8,21 @@
 - [x] Hero v3 (2026-10-30): 96 px hook, ticker removed, logo tilts in 3D on hover, wakes only on drag, click ripple off for now
 - [x] Logo spin (2026-10-31): zero-gravity quaternion spin with homing; rendered after the Blender model (depth, light, bevel). Now still: the logo stays flat (`LOGO_MOTION = "still"` in `logo-motion.ts`; "turn" for the 360°, "look" and "flick" kept). Owner: tune `MAX_YAW`, `MAX_PITCH`, `REACH`, `SMOOTH_S` in `look-at.ts`; optionally copy `Other/Blender/flag_mark_clean.obj` into `content/3d/` as the source of truth
 
+- [x] Footer: index ledger (Figma "2 · Index ledger · 1440", picked from 3 concepts in "Footer concepts (for review)", 2026-11-09)
+
 ## Next
+- [x] 2026-11-07 rebuild (Hallmark): new page from the Drive work; sloplint 0 FAIL
+- [ ] Owner: approve deleting the unused ASCII hero stack (`features/hero`, `features/site-nav`, `effects/*`, `animations/*`, `content/hero.json`, `content/3d/`); none of them is composed any more
+- [x] Contact email: contact@jiroh.works (nav, hero and contact close, 2026-11-07)
+- [ ] Owner: web and game dev work to show (repos, URLs or screenshots); listed as services only
+- [ ] Figma v4.1 (2026-11-08): Selected work tiles are now Garnier email campaigns, Reels and video edits, Launch creative, Game development, Web development (+ "Games" filter chip). Web and Game tiles and the case study frames "Case study · Website 01/02 · 1440" use grey placeholders: owner to send site names, URLs, stacks and screenshots, and game screenshots
+- [ ] Owner: confirm copy in `content/work.json` (hook, section lines, Nike piece labelled a concept)
 - [ ] Owner review of the experiments: keep, tune or drop each one
+- [ ] CMS: testimonials section setting to switch layout between Concept A (spotlight, words fill on scroll) and Concept B (wall, two drifting rows); Figma frames "Statement · Concept A/B" in Site v4.1. Home uses A for now (2026-11-09). Needs real client quotes, names, roles and photos; Figma copy is placeholder
 - [ ] Check on a real phone (touch skips hover; the logo sits below the copy under 860 px)
-- [ ] Design and build the next sections: Work, Services, About, Contact (nav links point to them already)
 
 ## Needs owner
-- Contact destination for "Start a project" (links to `#contact`, which doesn't exist yet)
+- Footer "Elsewhere" links (socials/profiles): `footer.elsewhere` in `content/work.json`; the column stays hidden while empty
 - Bring the click ripple back, or drop it? (`CLICK_RIPPLE` in `create-sculpture.ts`)
 - Delete `src/animations/marquee/` (unused since the ticker went; left in place)
 - Bring the logo-tilt wake back, or drop it? (`LOGO_WAKE` in `create-sculpture.ts`; code kept in `logo-wake.ts`)

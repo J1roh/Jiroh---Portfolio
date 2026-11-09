@@ -12,8 +12,9 @@ import colloquium from "./media/work/cs-colloquium.mp4";
 import colloquiumPoster from "./media/work/cs-colloquium-poster.jpg";
 import logoSting from "./media/work/cs180-logo.mp4";
 import logoStingPoster from "./media/work/cs180-logo-poster.jpg";
+import luauCode from "./media/work/luau-code.png";
 import type {
-  ContactContent, EditsContent, EmailsContent, FooterContent, GraphicsContent, IntroContent, MotionContent,
+  ContactContent, EditsContent, StatementContent, EmailsContent, FooterContent, GraphicsContent, IntroContent, MotionContent,
 } from "./types";
 
 /** Joins the copy in work.json with its media, in the order work.json lists the items. Aspect is height / width. */
@@ -57,3 +58,20 @@ export const graphicsContent: GraphicsContent = {
 export const editsContent: EditsContent = work.edits;
 export const contactContent: ContactContent = work.contact;
 export const footerContent: FooterContent = work.footer;
+
+/** Hero backdrops by craft, in work.json order. Web has none yet (owner: TBD), so it shows the plain canvas. */
+const craftFiles = [
+  { src: basketball, aspect: 2009 / 600 },
+  { src: nike, aspect: 1 },
+  { src: dayToGoPoster, aspect: 720 / 1280 },
+  { src: colloquiumPoster, aspect: 720 / 1280 },
+  null,
+  { src: luauCode, aspect: 650 / 1060 },
+];
+export const statementContent: StatementContent = {
+  ...work.statement,
+  crafts: work.statement.crafts.map(({ label, word, visualLabel }, i) => {
+    const file = craftFiles[i];
+    return { label, word, visual: file ? { ...file, label: visualLabel } : undefined };
+  }),
+};

@@ -2,8 +2,14 @@
   "intro": {
     "head": "Emails, posters and motion, made to ship.",
     "line": "I design launch emails and ad graphics, then animate and cut them.",
-    "primary": { "label": "Email me", "href": "mailto:contact@jiroh.works" },
-    "secondary": { "label": "See the emails", "href": "#emails" },
+    "primary": {
+      "label": "Email me",
+      "href": "mailto:contact@jiroh.works"
+    },
+    "secondary": {
+      "label": "See the emails",
+      "href": "#emails"
+    },
     "visualLabel": "Salt Lab win-back email, its $50 gift card offer at the top"
   },
   "emails": {
@@ -11,10 +17,22 @@
     "line": "Each opens at full length.",
     "openLabel": "Open the full email",
     "items": [
-      { "title": "Billfish Gear", "label": "Billfish Gear email, shown from the top" },
-      { "title": "Cannondale", "label": "Cannondale email, shown from the top" },
-      { "title": "Basketball", "label": "Basketball email, shown from the top" },
-      { "title": "Animated email", "label": "Animated GIF email test, shown from the top" }
+      {
+        "title": "Billfish Gear",
+        "label": "Billfish Gear email, shown from the top"
+      },
+      {
+        "title": "Cannondale",
+        "label": "Cannondale email, shown from the top"
+      },
+      {
+        "title": "Basketball",
+        "label": "Basketball email, shown from the top"
+      },
+      {
+        "title": "Animated email",
+        "label": "Animated GIF email test, shown from the top"
+      }
     ]
   },
   "motion": {
@@ -23,30 +41,70 @@
     "pause": "Pause",
     "play": "Play",
     "items": [
-      { "title": "1 day to go", "label": "Countdown animation: a large 1 over the words day to go" },
-      { "title": "CS Colloquium", "label": "Event title animation for the CS Colloquium" },
-      { "title": "Logo animation", "label": "The CS 180 Student Research logo building itself" }
+      {
+        "title": "1 day to go",
+        "label": "Countdown animation: a large 1 over the words day to go"
+      },
+      {
+        "title": "CS Colloquium",
+        "label": "Event title animation for the CS Colloquium"
+      },
+      {
+        "title": "Logo animation",
+        "label": "The CS 180 Student Research logo building itself"
+      }
     ]
   },
   "graphics": {
     "head": "Posters and ad layouts",
     "line": "Concept pieces: type set loud, product front and centre.",
     "items": [
-      { "title": "Sneakers, new collection", "note": "Concept ad, Nike", "label": "Red Nike running shoe and its sole over a smoky grey ground, NIKE set vertically in red" },
-      { "title": "Best burger in the town", "note": "Food poster", "label": "A stacked cheeseburger mid-air over a dark sunburst, yellow distressed headline above" }
+      {
+        "title": "Sneakers, new collection",
+        "note": "Concept ad, Nike",
+        "label": "Red Nike running shoe and its sole over a smoky grey ground, NIKE set vertically in red"
+      },
+      {
+        "title": "Best burger in the town",
+        "note": "Food poster",
+        "label": "A stacked cheeseburger mid-air over a dark sunburst, yellow distressed headline above"
+      }
     ]
   },
   "edits": {
     "head": "Edited video",
     "line": "Short and long form, hosted on Drive.",
     "watch": "Watch on Drive",
-    "columns": { "title": "Project", "form": "Form" },
+    "columns": {
+      "title": "Project",
+      "form": "Form"
+    },
     "rows": [
-      { "title": "PowerGlide", "form": "Short form", "href": "https://drive.google.com/drive/folders/1mbDBPz9a_wUqZub4AJTZkLuk0Wfzxd9k" },
-      { "title": "RealSimGear", "form": "Short form", "href": "https://drive.google.com/drive/folders/1s7LX0jLTwHRGtz7-m82MjIDhMndy8DNU" },
-      { "title": "Wood Works", "form": "Short form", "href": "https://drive.google.com/drive/folders/1gjlao9C9Dsa9AxNJIn00miSCxKc2UHOT" },
-      { "title": "Refueling in X-Plane 12", "form": "Long form", "href": "https://drive.google.com/file/d/1Ft6l-X5NdxPL-_Y9VA3_qQzEmkWsZnNn/view" },
-      { "title": "Global Weather Networking", "form": "Long form", "href": "https://drive.google.com/drive/folders/1JCDZocIP_zms-TBA1ScsXvC5sdP25YTw" }
+      {
+        "title": "PowerGlide",
+        "form": "Short form",
+        "href": "https://drive.google.com/drive/folders/1mbDBPz9a_wUqZub4AJTZkLuk0Wfzxd9k"
+      },
+      {
+        "title": "RealSimGear",
+        "form": "Short form",
+        "href": "https://drive.google.com/drive/folders/1s7LX0jLTwHRGtz7-m82MjIDhMndy8DNU"
+      },
+      {
+        "title": "Wood Works",
+        "form": "Short form",
+        "href": "https://drive.google.com/drive/folders/1gjlao9C9Dsa9AxNJIn00miSCxKc2UHOT"
+      },
+      {
+        "title": "Refueling in X-Plane 12",
+        "form": "Long form",
+        "href": "https://drive.google.com/file/d/1Ft6l-X5NdxPL-_Y9VA3_qQzEmkWsZnNn/view"
+      },
+      {
+        "title": "Global Weather Networking",
+        "form": "Long form",
+        "href": "https://drive.google.com/drive/folders/1JCDZocIP_zms-TBA1ScsXvC5sdP25YTw"
+      }
     ]
   },
   "contact": {
@@ -54,7 +112,14 @@
     "line": "Write to me with the date and what needs making.",
     "email": "contact@jiroh.works",
     "servicesLabel": "What I make",
-    "services": ["Email design", "Graphic design", "Motion graphics", "Video editing", "Web development", "Game development"]
+    "services": [
+      "Email design",
+      "Graphic design",
+      "Motion graphics",
+      "Video editing",
+      "Web development",
+      "Game development"
+    ]
   },
   "footer": {
     "wordmark": "Jiroh",
@@ -64,5 +129,52 @@
     "elsewhereLabel": "Elsewhere",
     "elsewhere": [],
     "toTop": "Back to top"
+  },
+  "statement": {
+    "lead": "I make",
+    "tail": "that sell.",
+    "line": "Designer and editor for brand launches. Emails, ads, motion and video, from one desk.",
+    "primary": {
+      "label": "Start an enquiry",
+      "href": "#contact"
+    },
+    "secondary": {
+      "label": "See the work",
+      "href": "#emails"
+    },
+    "listLabel": "Crafts",
+    "crafts": [
+      {
+        "label": "Email",
+        "word": "emails",
+        "visualLabel": "Basketball launch email, a player mid-dunk"
+      },
+      {
+        "label": "Graphic",
+        "word": "ads",
+        "visualLabel": "Nike ad graphic"
+      },
+      {
+        "label": "Motion",
+        "word": "animations",
+        "visualLabel": "CS 180 “1 day to go” motion still"
+      },
+      {
+        "label": "Video",
+        "word": "videos",
+        "visualLabel": "CS Colloquium video still"
+      },
+      {
+        "label": "Web",
+        "word": "websites",
+        "visualLabel": ""
+      },
+      {
+        "label": "Games",
+        "word": "games",
+        "visualLabel": "Luau code from a Roblox game"
+      }
+    ],
+    "glyphs": "#%&*+=<>/?!0123456789"
   }
 }

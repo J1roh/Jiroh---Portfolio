@@ -55,7 +55,8 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 | Feature | Input | Composes |
 |---|---|---|
 | `top-bar` | `SiteContent` | button, theme-toggle, lib/theme: edge-aligned bar, wordmark, section links, one action |
-| `intro` | `IntroContent` | button: the Stage hero, hook and a real email on its sheet |
+| `hero-statement` | `StatementContent`, `motion` | button, scroll-scramble: the first screen (Figma "Hero · big type + craft list (G)", 2026-11-09). Craft's work full-bleed, "I make [word] that sell." bottom left, craft list top right, timed tabs at the foot. `use-craft-cycle.ts` (the 2.4 s cycle), `CraftWord.tsx` (the scrambling word), `CraftPicker.tsx` (list and tabs, one choice) are hero-statement only |
+| `intro` (not composed since 2026-11-09) | `IntroContent` | button: the Stage hero, hook and a real email on its sheet |
 | `email-grid` | `EmailsContent` | section-head: four emails cropped to their top, each linking to the full file |
 | `motion-reel` | `MotionContent`, `play` | section-head, loop-video: lead clip across, then a 7 / 5 pair |
 | `graphics` | `GraphicsContent` | section-head: head beside two posters |
@@ -68,4 +69,4 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 ## L4 Pages — `src/pages/`
 | Page | Responsibility |
 |---|---|
-| `Home.tsx` | Reads fx flags and reduced motion, starts smooth scroll, composes top-bar → intro → email-grid → motion-reel → graphics → edit-index → contact → site-footer (2026-11-07 rebuild) |
+| `Home.tsx` | Reads fx flags and reduced motion, starts smooth scroll, composes top-bar → hero-statement → email-grid → motion-reel → graphics → edit-index → contact → site-footer (2026-11-07 rebuild; hero-statement replaced intro 2026-11-09) |

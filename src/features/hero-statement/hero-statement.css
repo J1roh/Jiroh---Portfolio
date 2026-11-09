@@ -1,0 +1,87 @@
+/* Figma "Hero · big type + craft list (G)", 1440 × 900: work full-bleed, scrim heavy at the foot and the left. */
+.statement {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  min-height: max(calc(100svh - 68px), 40rem);
+  display: grid;
+}
+.statement__backdrops { position: absolute; inset: 0; z-index: -2; }
+.statement__backdrop {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 20%;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity var(--duration-reveal) var(--easing-out), transform var(--cycle) linear;
+}
+.statement__backdrop[data-on="true"] { opacity: 1; transform: scale(1); }
+.statement__scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(to right, color-mix(in oklab, var(--color-bg) 70%, transparent), transparent 60%),
+    linear-gradient(to bottom,
+      color-mix(in oklab, var(--color-bg) 25%, transparent),
+      color-mix(in oklab, var(--color-bg) 50%, transparent) 45%,
+      color-mix(in oklab, var(--color-bg) 97%, transparent) 92%);
+}
+
+.statement__inner {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto auto;
+  row-gap: var(--space-6);
+  padding-block: var(--space-7) var(--space-5);
+}
+.statement__list { grid-row: 1; justify-self: end; }
+.statement__row { grid-row: 4; }
+.statement__tabs { grid-row: 5; }
+.statement__title {
+  grid-row: 3;
+  font-size: var(--text-poster);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-hook);
+  letter-spacing: var(--tracking-hook);
+}
+.statement__word { color: var(--color-tint); }
+.statement__row {
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: space-between;
+  gap: var(--space-5) var(--space-6);
+}
+.statement__line { max-width: 34ch; font-size: var(--text-lg); color: var(--color-text-muted); }
+.statement__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+/* Craft picker: shared reset, then the list and the tabs. */
+.craft-list, .craft-tabs { list-style: none; margin: 0; padding: 0; }
+.craft-pick {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--easing-out);
+}
+.craft-pick:hover, .craft-pick[aria-pressed="true"] { color: var(--color-text); }
+.craft-pick:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+
+.craft-list { display: grid; gap: var(--space-3); }
+.craft-list .craft-pick { position: relative; display: flex; align-items: baseline; gap: var(--space-5); font-size: var(--text-lg); }
+.craft-pick__num { font-family: var(--font-mono); font-size: var(--text-label); color: var(--color-steel); }
+.craft-list .craft-pick[aria-pressed="true"] { font-weight: var(--weight-medium); }
+.craft-list .craft-pick[aria-pressed="true"]::before {
+  content: ""; position: absolute; left: calc(-1 * var(--space-4)); top: 0; bottom: 0;
+  width: 2px; background: var(--color-ink);
+}
+
+.craft-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: var(--space-5); }
+.craft-tabs .craft-pick { display: grid; gap: var(--space-2); width: 100%; font-size: var(--text-label); }
+.craft-pick__track { position: relative; display: block; height: 2px; background: var(--color-hairline); }
+.craft-pick__fill { position: absolute; inset: 0; background: var(--color-ink); transform-origin: left; }
+.craft-pick__fill[data-timed="true"] { animation: craft-fill var(--cycle) linear both; }
+@keyframes craft-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* Phones: no list (the tabs carry the choice and scroll sideways); sub, then buttons. */
+@media (max-width: 60rem) {
+  .statement__list { display: none; }
+  .statement__row { flex-direction: column; align-items: flex-start; }
+  .craft-tabs { grid-template-columns: repeat(6, minmax(5.5rem, 1fr)); overflow-x: auto; scrollbar-width: none; }
+}

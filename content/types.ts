@@ -54,3 +54,14 @@ export type FooterContent = {
   elsewhereLabel: string; elsewhere: Link[];
 };
 
+
+/** One craft in the hero statement: its list/tab label, the word set in the h1, and its backdrop (absent until the owner sends one). */
+export type Craft = { label: string; word: string; visual?: ImageContent };
+/** The hero statement (Figma "Hero · big type + craft list (G)"): "lead [word] tail.", one line, two actions, the crafts. */
+export type StatementContent = {
+  lead: string; tail: string; line: string; primary: Link; secondary: Link;
+  listLabel: string;
+  /** Glyphs the word scrambles through on each swap. */
+  glyphs: string;
+  crafts: Craft[];
+};

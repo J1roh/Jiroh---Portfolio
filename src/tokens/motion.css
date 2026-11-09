@@ -9,6 +9,7 @@
 
   --duration-fast: calc(var(--motion-fast) * 1ms);
   --duration-base: calc(var(--motion-base) * 1ms);
+  --duration-reveal: calc(var(--motion-reveal) * 1ms);
   --easing-out: cubic-bezier(var(--ease-out));
   --easing-in-out: cubic-bezier(var(--ease-in-out));
 }

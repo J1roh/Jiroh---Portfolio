@@ -33,6 +33,7 @@ Every effect and animation has one row. Under reduced motion, everything below i
 
 | Name | Files | Trigger | Timing | `?fx` | Reduced motion |
 |---|---|---|---|---|---|
+| Craft cycle | `features/hero-statement/` (`use-craft-cycle.ts`, `CraftWord.tsx`, `CraftPicker.tsx`, `hero-statement.css`) | On load, every 2.4 s (`CYCLE_MS`); clicking a craft in the list or the tabs jumps to it; pointing at or focusing either holds the cycle | The h1's word scrambles to the next craft left to right over `--motion-reveal` (scroll-scramble driven by motion.dev `animate` on a motion value); the backdrop crossfades over `--duration-reveal`, `--easing-out`, and settles 1.05 → 1 over the cycle; the active tab fills over the cycle (CSS keyframes). Figma Site v5 storyboard 02 | `cycle` | No auto cycle; the visitor picks a craft; word and backdrop swap at once |
 | Footer arrow nudge | `features/site-footer/site-footer.css` | Hovering the footer email | The ↗ moves 0.06 em up-right and turns ink, `--duration-fast`, `--easing-out`; CSS transition, motion.dev not needed | — | No move, colour only |
 | Loop video | `components/loop-video/`, used by `features/motion-reel/` | Plays while on screen | Native loop of each clip (3 to 6 s); Pause/Play button on each; motion.dev checked, a native `<video>` needs no library | `loops` | Poster only, no button |
 | Split reveal | `animations/split-reveal/` | Hook lines on load, 0.12 s apart | `--motion-reveal` 900 ms, `--motion-stagger` 28 ms per letter, `--ease-out` | `reveal` | Plain text |

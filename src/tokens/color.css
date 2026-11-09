@@ -15,6 +15,7 @@
   --color-field: #26354a;       /* dim background ASCII letters */
   --color-scrim: rgb(14 20 28 / 0.92);
   --color-scrim-mid: rgb(14 20 28 / 0.7);
+  --color-tint: #9eb3c7;        /* the hero statement's craft word (Figma Hero G); 8.6:1 on navy */
   --color-focus: var(--color-steel);
   /* The hero's closing mask (Figma Reference "Transition - Alche"): a light panel over the dark field. */
   --color-mask: #ffffff;
@@ -37,6 +38,7 @@
   --color-field: #cbd2da;       /* pale background ASCII letters */
   --color-scrim: rgb(237 239 242 / 0.92);
   --color-scrim-mid: rgb(237 239 242 / 0.7);
+  --color-tint: #3d556e;        /* 6.9:1 on mist white */
   /* Light mode inverts the mask too: a navy panel over the pale field. Not in Figma yet. */
   --color-mask: #131c26;
   --color-mask-grid: #1d2834;

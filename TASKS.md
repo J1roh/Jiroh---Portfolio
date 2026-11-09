@@ -10,7 +10,12 @@
 
 - [x] Footer: index ledger (Figma "2 · Index ledger · 1440", picked from 3 concepts in "Footer concepts (for review)", 2026-11-09)
 
+- [x] Hero G (2026-11-09): `features/hero-statement` replaces `intro` on Home; Figma "Hero · big type + craft list (G)"
+
 ## Next
+- [ ] Owner: hero words per craft are assumed (emails, ads, animations, videos, websites, games); confirm in `content/work.json` → `statement`
+- [ ] Owner: Web backdrop for the hero (none yet, shows the plain canvas); Video uses the CS Colloquium still for now
+- [ ] Rebuild the rest of Home to Figma v4.1: nav (Work, Services, About, Enquire), clients marquee, reel grow with side reels, Selected work track, Emails A v3, Services, Tools, Testimonials, Enquire band D
 - [x] 2026-11-07 rebuild (Hallmark): new page from the Drive work; sloplint 0 FAIL
 - [ ] Owner: approve deleting the unused ASCII hero stack (`features/hero`, `features/site-nav`, `effects/*`, `animations/*`, `content/hero.json`, `content/3d/`); none of them is composed any more
 - [x] Contact email: contact@jiroh.works (nav, hero and contact close, 2026-11-07)

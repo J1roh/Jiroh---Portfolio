@@ -1,8 +1,8 @@
 import {
-  contactContent, editsContent, emailsContent, footerContent, graphicsContent, introContent, motionContent, siteContent,
+  contactContent, editsContent, emailsContent, footerContent, graphicsContent, motionContent, siteContent, statementContent,
 } from "@content/index";
 import { TopBar } from "../features/top-bar";
-import { Intro } from "../features/intro";
+import { HeroStatement } from "../features/hero-statement";
 import { EmailGrid } from "../features/email-grid";
 import { MotionReel } from "../features/motion-reel";
 import { Graphics } from "../features/graphics";
@@ -18,7 +18,8 @@ const fx = readFxFlags(window.location.search);
 /**
  * Home page composer: the only place features meet.
  * 2026-11-07 rebuild: the work leads (emails, motion, graphics, video), then the contact close.
- * The old hero (`features/hero`, `features/site-nav`) is no longer composed; deleting it waits for the owner.
+ * The old hero (`features/hero`, `features/site-nav`) and `features/intro` are no longer composed; deleting them waits for the owner.
+ * 2026-11-09: the first screen is the Figma Hero G statement (`features/hero-statement`).
  */
 export function Home() {
   const still = useReducedMotion();
@@ -28,7 +29,7 @@ export function Home() {
     <>
       <TopBar content={siteContent} />
       <main id="main">
-        <Intro content={introContent} />
+        <HeroStatement content={statementContent} motion={fx.cycle && !still} />
         <EmailGrid content={emailsContent} />
         <MotionReel content={motionContent} play={fx.loops && !still} />
         <Graphics content={graphicsContent} />

@@ -29,3 +29,4 @@ html.lenis, html.lenis body { height: auto; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms; transition-duration: 0.01ms; }
 }
+html, body { overflow-x: clip; }

@@ -21,3 +21,14 @@
   --tracking-label: 0.04em;
   --tracking-micro: 0.06em;
 }
+/* Page scale (2026-11-07 rebuild, Hallmark layout steps on a 16px body). */
+:root {
+  --text-body: 1rem;                                    /* 16: running text */
+  --text-lead: 1.3125rem;                               /* 21: the one line under a head */
+  --text-title: 1.5625rem;                              /* 25: item titles */
+  --text-section: clamp(2.25rem, 1rem + 2.5vw, 3.25rem); /* 52 at 1440: h2 */
+  --text-display: clamp(2.75rem, 1.5rem + 4.2vw, 5.25rem); /* 84 at 1440: h1 */
+  --leading-display: 1;
+  --leading-head: 1.08;
+  --tracking-display: -0.035em;
+}

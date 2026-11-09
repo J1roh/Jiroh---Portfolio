@@ -20,3 +20,11 @@
   --z-content: 1;
   --z-nav: 10;
 }
+/* Page rhythm (2026-11-07 rebuild). */
+:root {
+  --gap-columns: 2rem;        /* 32 between the twelve columns */
+  --section-gap-s: 7.5rem;    /* 120 */
+  --section-gap: 9rem;        /* 144 */
+  --section-gap-l: 11rem;     /* 176 */
+  --radius-frame: 6px;
+}

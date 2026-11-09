@@ -1,0 +1,41 @@
+/* Hallmark · v2.0.0 · shape: index-led portfolio (Stage hero, then the work by craft) · theme: locked by DESIGN.md (navy, Geist), deal skipped · genre: editorial · job: hire, contact in the nav and once after the work · hero: Stage, text 5 cols, the Salt Lab email on a sheet 7 cols · nav: edge-aligned, wordmark, four section links, theme toggle, one action · footer: mast, the wordmark over the links · signature: a real email set at its native width on a sheet in the hero · imagery: the owner's own work, 11 files from Drive, no library photos · motion: three looping clips with a pause control, no reveal · posture: Restrained, no accent hue · surface: absolute (white ink, DESIGN.md) */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: P, a work-first page argues little; let the emails run at their own width rather than shrink them into cards */
+/* Hallmark · waive 7b · --color-ink resolves to #ffffff in DESIGN.md · the owner's navy kit sets white ink on navy and the logo is white */
+/* Hallmark · answered F20 · the motion reel is one lead clip across, then a 7 and 5 pair; the lone row is the lead on purpose */
+/* Hallmark · dismissed 54 · SectionHead is a component that renders the h2 the section is labelled by */
+/* Hallmark · dismissed 28a · the LCP is the hero's Salt Lab email, loaded with fetchpriority high; the lazy images sit below the fold */
+
+/* Page canvas: one capped container, twelve columns, section rhythm. */
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap-columns);
+}
+.section { padding-block: var(--section-gap) 0; scroll-margin-top: var(--nav-height); }
+.section--s { padding-top: var(--section-gap-s); }
+.section--l { padding-top: var(--section-gap-l); }
+
+h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+p { text-wrap: pretty; }
+
+.frame {
+  margin: 0;
+  overflow: clip;
+  border-radius: var(--radius-frame);
+  background: var(--color-surface);
+  outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent);
+  outline-offset: -1px;
+}
+.frame > img, .frame > video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.caption { margin-top: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted); }
+.caption strong { display: block; font-size: var(--text-body); font-weight: var(--weight-medium); color: var(--color-text); }
+
+@media (max-width: 60rem) {
+  .grid-12 > * { grid-column: 1 / -1; }
+}

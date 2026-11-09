@@ -1,0 +1,8 @@
+/* Figma "Enquire · 1440": text 5 cols, the form card 7 cols. */
+.enquire { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-8); align-items: start; padding-block: var(--space-8) var(--space-9); }
+.enquire__text { display: grid; gap: var(--space-5); }
+.enquire__title { font-size: var(--text-head-xl); font-weight: var(--weight-bold); line-height: var(--leading-hook); letter-spacing: var(--tracking-hook); }
+.enquire__line { max-width: 34ch; color: var(--color-text-muted); }
+.enquire__mail { font-size: var(--text-sm); color: var(--color-text-muted); }
+.enquire__mail a { color: var(--color-text); border-bottom: 1px solid var(--color-hairline); }
+@media (max-width: 60rem) { .enquire { grid-template-columns: minmax(0, 1fr); } }

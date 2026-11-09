@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jiroh builds websites, launch emails and games." />
     <meta name="theme-color" content="#0e141c" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- Theme before first paint (src/lib/theme/use-theme.ts keeps it in sync): the visitor's choice, else the system's. -->
     <script>
       (function () {
@@ -14,7 +14,17 @@
         if (theme === "light") document.querySelector('meta[name="theme-color"]').setAttribute("content", "#edeff2");
       })();
     </script>
-    <title>Jiroh — Sites, emails &amp; games</title>
+    <!-- Title and description are set per page by React (components/page-meta); these tags are for link previews. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jiroh" />
+    <meta property="og:title" content="Jiroh — Emails, ads, motion, video, sites and games" />
+    <meta property="og:description" content="Designer and editor for brand launches. Emails, ads, motion and video, from one desk." />
+    <meta property="og:url" content="https://jiroh.works/" />
+    <meta property="og:image" content="https://jiroh.works/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://jiroh.works/" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>

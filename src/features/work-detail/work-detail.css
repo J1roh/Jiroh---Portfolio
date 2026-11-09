@@ -1,0 +1,21 @@
+/* Figma "Work detail": eyebrow, 64px title, meta row, the work, then a big Next link. */
+.work-detail { padding-top: var(--space-8); }
+.work-detail__head { display: grid; gap: var(--space-5); }
+.work-detail__eyebrow { font-size: var(--text-sm); color: var(--color-text-muted); }
+.work-detail__eyebrow:hover { color: var(--color-text); }
+.work-detail__title { max-width: 16ch; font-size: var(--text-display); font-weight: var(--weight-bold); line-height: var(--leading-display); letter-spacing: var(--tracking-display); }
+.work-detail__meta { display: flex; flex-wrap: wrap; gap: var(--space-8); margin: var(--space-3) 0 0; padding-top: var(--space-4); border-top: 1px solid var(--color-hairline); }
+.work-detail__meta dt { font-size: var(--text-micro); color: var(--color-steel); text-transform: uppercase; letter-spacing: var(--tracking-micro); font-family: var(--font-mono); }
+.work-detail__meta dd { margin: var(--space-1) 0 0; font-size: var(--text-sm); }
+.work-detail__media { display: grid; gap: var(--space-6); margin-top: var(--space-8); }
+.work-detail__wide { width: 100%; }
+.work-detail__wide.frame > img { height: auto; }
+.work-detail__sheet { display: flex; justify-content: center; padding: var(--space-8) var(--space-5); }
+.work-detail__sheet.frame > img { width: min(100%, 600px); height: auto; border-radius: var(--radius-sm); }
+.work-detail__links { margin-top: var(--space-8); }
+.work-detail__links-title { font-size: var(--text-title); font-weight: var(--weight-bold); }
+.work-detail__links ul { display: flex; flex-wrap: wrap; gap: var(--space-3); margin: var(--space-5) 0 0; padding: 0; list-style: none; }
+.work-detail__next { display: grid; gap: var(--space-2); margin-top: var(--space-9); padding-block: var(--space-7); border-top: 1px solid var(--color-hairline); }
+.work-detail__next-label { font-size: var(--text-sm); color: var(--color-text-muted); }
+.work-detail__next-title { font-size: var(--text-head-xl); font-weight: var(--weight-bold); letter-spacing: var(--tracking-hook); line-height: var(--leading-hook); }
+.work-detail__next:hover .work-detail__next-title { color: var(--color-tint); }

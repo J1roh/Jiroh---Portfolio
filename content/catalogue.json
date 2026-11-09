@@ -1,0 +1,269 @@
+{
+  "index": {
+    "head": "Work",
+    "mark": "©26",
+    "line": "Every piece, by craft.",
+    "filtersLabel": "Filter by craft",
+    "all": "All",
+    "viewAll": "View all",
+    "count": "pieces",
+    "crafts": {
+      "Email": "Launch and lifecycle emails, built to render.",
+      "Graphic": "Ads, posters and launch creative.",
+      "Motion": "Titles, countdowns and logo stings.",
+      "Video": "Short and long form, cut for the feed.",
+      "Web": "Sites like this one, fast and hand-built.",
+      "Games": "Small games people replay."
+    }
+  },
+  "detail": {
+    "eyebrow": "Work",
+    "client": "Client",
+    "craft": "Craft",
+    "next": "Next",
+    "back": "All work",
+    "links": "Watch on Drive",
+    "viaMedialuv": "via Medialuv.",
+    "play": "Play",
+    "pause": "Pause"
+  },
+  "items": [
+    {
+      "slug": "garnier-emails",
+      "title": "Email Campaigns",
+      "craft": "Email",
+      "client": "Garnier",
+      "viaMedialuv": true,
+      "media": [
+        {
+          "kind": "image",
+          "key": "garnier",
+          "label": "Garnier Fructis and Nutrisse email, full length"
+        }
+      ]
+    },
+    {
+      "slug": "salt-lab",
+      "title": "Win-back email",
+      "craft": "Email",
+      "client": "Salt Lab",
+      "media": [
+        {
+          "kind": "image",
+          "key": "saltLab",
+          "label": "Salt Lab win-back email, its $50 gift card offer at the top"
+        }
+      ]
+    },
+    {
+      "slug": "uniworld",
+      "title": "Uniworld email",
+      "craft": "Email",
+      "client": "Uniworld",
+      "media": [
+        {
+          "kind": "image",
+          "key": "uniworld",
+          "label": "Uniworld email, full length"
+        }
+      ]
+    },
+    {
+      "slug": "dispatch-email",
+      "title": "Dispatch email",
+      "craft": "Email",
+      "client": "Dispatch",
+      "media": [
+        {
+          "kind": "image",
+          "key": "dispatchEmail",
+          "label": "Dispatch email, full length"
+        }
+      ]
+    },
+    {
+      "slug": "billfish-email",
+      "title": "Billfish Gear email",
+      "craft": "Email",
+      "client": "Billfish Gear",
+      "media": [
+        {
+          "kind": "image",
+          "key": "billfish",
+          "label": "Billfish Gear email, full length"
+        }
+      ]
+    },
+    {
+      "slug": "cannondale-email",
+      "title": "Cannondale email",
+      "craft": "Email",
+      "client": "Cannondale",
+      "media": [
+        {
+          "kind": "image",
+          "key": "cannondale",
+          "label": "Cannondale email, full length"
+        }
+      ]
+    },
+    {
+      "slug": "basketball-email",
+      "title": "Basketball email",
+      "craft": "Email",
+      "media": [
+        {
+          "kind": "image",
+          "key": "basketball",
+          "label": "Basketball email, full length"
+        }
+      ]
+    },
+    {
+      "slug": "animated-email",
+      "title": "Animated email",
+      "craft": "Email",
+      "media": [
+        {
+          "kind": "image",
+          "key": "emailGif",
+          "label": "Animated GIF email test, full length"
+        }
+      ]
+    },
+    {
+      "slug": "nike-sneakers",
+      "title": "Sneakers, new collection",
+      "craft": "Graphic",
+      "sub": "Concept ad, Nike",
+      "media": [
+        {
+          "kind": "image",
+          "key": "nike",
+          "label": "Red Nike running shoe and its sole over a smoky grey ground, NIKE set vertically in red"
+        }
+      ]
+    },
+    {
+      "slug": "best-burger",
+      "title": "Best burger in the town",
+      "craft": "Graphic",
+      "sub": "Food poster",
+      "media": [
+        {
+          "kind": "image",
+          "key": "burger",
+          "label": "A stacked cheeseburger mid-air over a dark sunburst, yellow distressed headline above"
+        }
+      ]
+    },
+    {
+      "slug": "dispatch-launch",
+      "title": "Launch creative",
+      "craft": "Graphic",
+      "client": "Dispatch",
+      "media": [
+        {
+          "kind": "image",
+          "key": "dispatchLaunch",
+          "label": "Dispatch “Hop to it” launch creative"
+        }
+      ]
+    },
+    {
+      "slug": "cs180-motion",
+      "title": "Motion graphics",
+      "craft": "Motion",
+      "client": "CS 180 Student Research",
+      "sub": "Countdowns, event titles and a logo sting",
+      "media": [
+        {
+          "kind": "video",
+          "key": "dayToGo",
+          "label": "Countdown animation: a large 1 over the words day to go"
+        },
+        {
+          "kind": "video",
+          "key": "colloquium",
+          "label": "Event title animation for the CS Colloquium"
+        },
+        {
+          "kind": "video",
+          "key": "logoSting",
+          "label": "The CS 180 Student Research logo building itself"
+        }
+      ]
+    },
+    {
+      "slug": "reels-and-video",
+      "title": "Reels and video edits",
+      "craft": "Video",
+      "sub": "Short and long form",
+      "media": [
+        {
+          "kind": "image",
+          "key": "billfishReel",
+          "label": "Billfish Gear reel still"
+        }
+      ],
+      "links": [
+        {
+          "label": "PowerGlide · Short form",
+          "href": "https://drive.google.com/drive/folders/1mbDBPz9a_wUqZub4AJTZkLuk0Wfzxd9k"
+        },
+        {
+          "label": "RealSimGear · Short form",
+          "href": "https://drive.google.com/drive/folders/1s7LX0jLTwHRGtz7-m82MjIDhMndy8DNU"
+        },
+        {
+          "label": "Wood Works · Short form",
+          "href": "https://drive.google.com/drive/folders/1gjlao9C9Dsa9AxNJIn00miSCxKc2UHOT"
+        },
+        {
+          "label": "Refueling in X-Plane 12 · Long form",
+          "href": "https://drive.google.com/file/d/1Ft6l-X5NdxPL-_Y9VA3_qQzEmkWsZnNn/view"
+        },
+        {
+          "label": "Global Weather Networking · Long form",
+          "href": "https://drive.google.com/drive/folders/1JCDZocIP_zms-TBA1ScsXvC5sdP25YTw"
+        }
+      ]
+    },
+    {
+      "slug": "websites",
+      "title": "Websites I built",
+      "craft": "Web",
+      "sub": "Web development",
+      "media": [
+        {
+          "kind": "image",
+          "key": "webSite",
+          "label": "A website Jiroh built, Japanese to English"
+        }
+      ]
+    },
+    {
+      "slug": "game-development",
+      "title": "Game development",
+      "craft": "Games",
+      "sub": "Games and prototypes",
+      "media": [
+        {
+          "kind": "image",
+          "key": "gameWinners",
+          "label": "A Roblox game’s winners podium"
+        },
+        {
+          "kind": "image",
+          "key": "luauCode",
+          "label": "Luau code from a Roblox game"
+        },
+        {
+          "kind": "image",
+          "key": "gameCastle",
+          "label": "A castle scene from a Roblox game"
+        }
+      ]
+    }
+  ]
+}

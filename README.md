@@ -23,4 +23,6 @@ Hero section built from Figma `Hero v3 — Large H1` (v2 layout, 96 px hook, no 
 | D4 | 2026-10-30 | `lenis` for smooth scroll, as on alche.studio and The Content Architecture. |
 | D5 | 2026-10-30 | Fonts: Geist and Geist Mono via `@fontsource-variable/*` (self-hosted, no Google Fonts request). |
 | D6 | 2026-10-30 | `oxlint` for linting, as in Robert - Portfolio. |
+| D8 | 2026-11-09 | `react-router` for the v1 pages (Home, Work, Work detail, Enquire, 404): data-free library mode, `createBrowserRouter`. |
+| D9 | 2026-11-09 | `@supabase/supabase-js` for the enquiry form (submits through the `submit-enquiry` edge function); without env keys the form falls back to mailto. |
 | D7 | 2026-10-30 | Palette and layout v2 (owner): navy and white, Content Architecture split with an ASCII logo; electric blue and arcade retired. The ASCII sculpture uses Canvas 2D with a glyph atlas, so no new dependency. |

@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useMotionValueEvent, useTransform } from "motion/react";
 import type { WorkContent } from "@content/index";
 import { SectionHead } from "../../components/section-head";
+import { SmartLink } from "../../components/smart-link";
 import { usePinProgress } from "../../lib/scroll/use-pin-progress";
 import { useElementSize } from "../../lib/viewport/use-element-size";
 import { WorkCards } from "./WorkCards";
@@ -69,7 +70,7 @@ export function SelectedWork({ content, pinned }: SelectedWorkProps) {
             <span className="work__fill" style={{ transform: `scaleX(${(active + 1) / n})` }} />
           </span>
           <span className="work__count">{String(active + 1).padStart(2, "0")} / {String(n).padStart(2, "0")}</span>
-          <a className="work__all" href={content.allWork.href}>{content.allWork.label} ↗</a>
+          <SmartLink className="work__all" href={content.allWork.href}>{content.allWork.label} ↗</SmartLink>
         </div>
       </div>
     </section>

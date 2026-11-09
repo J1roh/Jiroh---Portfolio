@@ -54,6 +54,11 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 ### Added 2026-11-09
 | Module | Public API |
 |---|---|
+| `components/smart-link` | `<SmartLink href … />`: router `Link` for site paths, plain `<a>` otherwise |
+| `components/page-meta` | `<PageMeta meta />`: the page's `<title>` and description (React 19 hoists them) |
+| `lib/router` | `useRouteScroll()`: top of page on route change, or the `#hash` target |
+| `lib/supabase` | `submitEnquiry(fields)` → `"sent" \| "mail" \| "rate" \| "invalid" \| "failed"`; `canStoreEnquiries`. Loads supabase-js only on send; no keys → `"mail"` |
+| `lib/fx/fx.ts` | `fx`: the URL's fx flags, read once |
 | `animations/time-scramble` | `<TimeScramble text glyphs play enabled />`: scroll-scramble driven by time, replays when `play` changes |
 | `effects/ascii-type-field` | `<AsciiTypeField text glyphs enabled />`: one canvas of glyphs where `text` reads out brighter; churns slowly, glows near the pointer |
 | `effects/glyph-backdrop` | `<GlyphBackdrop glyphs />`: the fixed, faint ASCII rows behind the page, drawn once per resize |
@@ -64,6 +69,9 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 | `top-bar` | `SiteContent` | button, theme-toggle, lib/theme: edge-aligned bar, wordmark, section links, one action |
 | `hero-statement` | `StatementContent`, `motion` | button, scroll-scramble: the first screen (Figma "Hero · big type + craft list (G)", 2026-11-09). Craft's work full-bleed, "I make [word] that sell." bottom left, craft list top right, timed tabs at the foot. `use-craft-cycle.ts` (the 2.4 s cycle), `CraftWord.tsx` (the scrambling word), `CraftPicker.tsx` (list and tabs, one choice) are hero-statement only |
 | `intro` (not composed since 2026-11-09) | `IntroContent` | button: the Stage hero, hook and a real email on its sheet |
+| `work-index` | `CatalogueContent` | section-head, smart-link: every piece by craft, sideways rows with View all; `?craft=` narrows to one craft as a grid |
+| `work-detail` | `CatalogueContent`, `WorkItem`, next `WorkItem`, `motion` | button, smart-link, loop-video: one piece at its own proportions, outside links, Next. `WorkMediaView.tsx` is work-detail only |
+| `enquiry-form` | `EnquirePageContent`, email | lib/supabase: name, email, company, timeline, message + honeypot; inline errors; Supabase or mailto fallback. `Field.tsx`, `validate.ts` are enquiry-form only |
 | `clients-marquee` | `ClientsContent`, `moving` | the client names row; loops left, pauses on hover; "via Medialuv." credits |
 | `reel-grow` | `ReelContent`, `pinned` | lib/scroll: centre reel with neighbours peeking, counter and arrows; pinned, the centre grows full-bleed. `ReelStage.tsx` (the three reels and Play) is reel-grow only |
 | `selected-work` | `WorkContent`, `pinned` | section-head, lib/scroll, lib/viewport: six cards on a sideways track pinned to scroll, craft chips, progress and counter. `WorkCards.tsx` is selected-work only |
@@ -84,4 +92,8 @@ Inside `ascii-sculpture`: `build-grid.ts` (phrase grid, logo tiers and the field
 ## L4 Pages — `src/pages/`
 | Page | Responsibility |
 |---|---|
+| `Layout.tsx` | Every page's frame: glyph-backdrop, top-bar, `<Outlet />`, site-footer; smooth scroll; route scroll |
+| `WorkIndex.tsx`, `WorkDetail.tsx` | `/work`, `/work/:slug` (unknown slug → NotFound), each followed by enquire-band |
+| `Enquire.tsx` | `/enquire`: the ask and enquiry-form |
+| `NotFound.tsx` | `*`: plain 404 (not in Figma yet) |
 | `Home.tsx` | Reads fx flags and reduced motion, starts smooth scroll, composes glyph-backdrop, top-bar → hero-statement → clients-marquee → reel-grow → selected-work → emails-open → services → tools → testimonials → enquire-band → site-footer (Figma Home v4.1) (2026-11-07 rebuild; hero-statement replaced intro 2026-11-09) |

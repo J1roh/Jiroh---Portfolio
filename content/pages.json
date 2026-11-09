@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "site": "Jiroh",
+    "home": {
+      "title": "Jiroh — Emails, ads, motion, video, sites and games",
+      "description": "Designer and editor for brand launches. Emails, ads, motion and video, from one desk."
+    },
+    "work": {
+      "title": "Work — Jiroh",
+      "description": "Every piece, by craft: emails, graphics, motion, video, web and games."
+    },
+    "enquire": {
+      "title": "Start an enquiry — Jiroh",
+      "description": "Tell me what you are launching and when. I reply within two working days."
+    },
+    "notFound": {
+      "title": "Page not found — Jiroh",
+      "description": "This page does not exist."
+    }
+  },
+  "enquire": {
+    "head": "Start an enquiry",
+    "line": "Tell me what you are launching and when, in your own words. I reply within two working days.",
+    "emailPrompt": "Prefer email?",
+    "fields": {
+      "name": {
+        "label": "Your name",
+        "placeholder": "Jane from Example Co.",
+        "max": 200
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "jane@example.com",
+        "max": 320
+      },
+      "company": {
+        "label": "Company or brand (optional)",
+        "placeholder": "Example Co.",
+        "max": 200
+      },
+      "timeline": {
+        "label": "Preferred timeline (optional)",
+        "placeholder": "e.g. December 2026",
+        "max": 200
+      },
+      "message": {
+        "label": "About the project",
+        "placeholder": "What you’re launching, what it needs (emails, site, game, video…), where it runs, links, deadline",
+        "max": 5000
+      }
+    },
+    "honeypot": "Leave this empty",
+    "reply": "I usually reply within two working days.",
+    "submit": "Send enquiry",
+    "sending": "Sending…",
+    "privacy": "Sending stores your message so I can reply. Nothing else is done with it.",
+    "sent": {
+      "head": "Thanks, it’s in.",
+      "line": "I’ll reply within two working days from contact@jiroh.works."
+    },
+    "mailNote": "Your email app opened with the enquiry filled in. Press send there to finish.",
+    "errors": {
+      "required": "This one is needed.",
+      "email": "That email doesn’t look right.",
+      "tooLong": "That’s longer than {max} characters.",
+      "rate": "You’ve sent a few enquiries already. Please wait a day or email me.",
+      "failed": "It didn’t send. Try again, or email me."
+    },
+    "mailSubject": "Enquiry from {name}"
+  },
+  "notFound": {
+    "head": "Page not found",
+    "line": "The link may be old, or the page moved.",
+    "home": {
+      "label": "Back home",
+      "href": "/"
+    },
+    "work": {
+      "label": "See the work",
+      "href": "/work"
+    }
+  }
+}

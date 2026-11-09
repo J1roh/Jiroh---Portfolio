@@ -48,7 +48,7 @@ export const workContent: WorkContent = {
   ...home.work,
   crafts: ["Email", "Graphic", "Motion", "Video", "Web", "Games"],
   items: home.work.items.map(({ label, ...card }, i) => ({
-    ...card, href: `#work-${card.slug}`, image: img(workFiles[i].src, workFiles[i].aspect, label),
+    ...card, href: `/work/${card.slug}`, image: img(workFiles[i].src, workFiles[i].aspect, label),
   })),
 };
 

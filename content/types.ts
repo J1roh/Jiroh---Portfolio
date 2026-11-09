@@ -99,3 +99,41 @@ export type EnquireBandContent = {
   art: string;
   glyphs: string;
 };
+
+/* Work pages (2026-11-09): every piece, grouped by craft. Unknown facts (year, role, brief) are left out, not invented. */
+export type WorkMedia = { kind: "image" | "video"; src: string; poster?: string; label: string; aspect: number };
+export type WorkItem = {
+  slug: string; title: string; craft: string;
+  client?: string; viaMedialuv?: boolean; sub?: string;
+  media: WorkMedia[];
+  /** Outside links, e.g. edits hosted on Drive. */
+  links?: Link[];
+};
+export type CatalogueContent = {
+  index: SectionHead & {
+    filtersLabel: string; all: string; viewAll: string; count: string;
+    /** Craft name → its one line, in display order. */
+    crafts: Record<string, string>;
+  };
+  detail: { eyebrow: string; client: string; craft: string; next: string; back: string; links: string; viaMedialuv: string; play: string; pause: string };
+  items: WorkItem[];
+};
+
+export type PageMeta = { title: string; description: string };
+export type EnquireField = { label: string; placeholder: string; max: number };
+export type EnquirePageContent = {
+  head: string; line: string; emailPrompt: string;
+  fields: Record<"name" | "email" | "company" | "timeline" | "message", EnquireField>;
+  honeypot: string; reply: string; submit: string; sending: string; privacy: string;
+  sent: { head: string; line: string };
+  /** Shown when the form falls back to the visitor's mail app (no Supabase keys). */
+  mailNote: string;
+  errors: { required: string; email: string; tooLong: string; rate: string; failed: string };
+  mailSubject: string;
+};
+export type NotFoundContent = { head: string; line: string; home: Link; work: Link };
+export type PagesContent = {
+  meta: { site: string; home: PageMeta; work: PageMeta; enquire: PageMeta; notFound: PageMeta };
+  enquire: EnquirePageContent;
+  notFound: NotFoundContent;
+};

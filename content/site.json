@@ -3,16 +3,16 @@
   "nav": [
     {
       "label": "Work",
-      "href": "#work"
+      "href": "/work"
     },
     {
       "label": "Services",
-      "href": "#services"
+      "href": "/#services"
     }
   ],
   "cta": {
     "label": "Enquire",
-    "href": "#enquire"
+    "href": "/enquire"
   },
   "theme": {
     "toLight": "Switch to light mode",

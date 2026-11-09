@@ -1,5 +1,6 @@
 import type { Ref } from "react";
 import type { WorkCard } from "@content/index";
+import { SmartLink } from "../../components/smart-link";
 
 type WorkCardsProps = { ref: Ref<HTMLUListElement>; items: WorkCard[]; craft: string | null };
 
@@ -9,7 +10,7 @@ export function WorkCards({ ref, items, craft }: WorkCardsProps) {
     <ul ref={ref} className="work__track">
       {items.map((card, i) => (
         <li key={card.slug} className="work__card" data-dim={craft !== null && card.craft !== craft}>
-          <a className="work__link" href={card.href}>
+          <SmartLink className="work__link" href={card.href}>
             <span className="work__image frame">
               <img src={card.image.src} alt={card.image.label} loading="lazy" decoding="async" width={640} height={440} />
             </span>
@@ -21,7 +22,7 @@ export function WorkCards({ ref, items, craft }: WorkCardsProps) {
               </span>
               <span className="work__craft">{card.craft}</span>
             </span>
-          </a>
+          </SmartLink>
         </li>
       ))}
     </ul>

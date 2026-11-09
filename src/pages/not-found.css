@@ -1,0 +1,4 @@
+.not-found { display: grid; gap: var(--space-5); align-content: center; min-height: 70svh; }
+.not-found__title { font-size: var(--text-poster); font-weight: var(--weight-bold); line-height: var(--leading-hook); letter-spacing: var(--tracking-hook); }
+.not-found__line { color: var(--color-text-muted); font-size: var(--text-lead); }
+.not-found__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }

@@ -12,7 +12,14 @@
 
 - [x] Hero G (2026-11-09): `features/hero-statement` replaces `intro` on Home; Figma "Hero · big type + craft list (G)"
 
+- [x] v1 pages (2026-11-09): router; /work (by craft, ?craft= filter), /work/:slug, /enquire (form; Supabase or mailto fallback), 404; per-page titles; OG image, robots, sitemap, favicon, vercel.json
+
 ## Next
+- [ ] Owner: create the Supabase project and follow `supabase/README.md` (until then the form opens the visitor's mail app)
+- [ ] Owner: import github.com/J1roh/Jiroh---Portfolio in Vercel (framework Vite, branch section-transitions or merge to main), then point jiroh.works at it once the current site is down
+- [ ] Owner: per-piece briefs, years and roles for /work/:slug (left out until given)
+- [ ] 404 page is plain (not in Figma yet)
+- [ ] Mobile nav shows only Enquire (Work, Services hidden under 60rem): design a menu or accept
 - [ ] Owner: hero words per craft are assumed (emails, ads, animations, videos, websites, games); confirm in `content/work.json` → `statement`
 - [ ] Owner: Web backdrop for the hero (none yet, shows the plain canvas); Video uses the CS Colloquium still for now
 - [x] Home rebuilt to Figma v4.1 (2026-11-09): nav, clients marquee, reel grow, Selected work track, Emails A v3, Services, Tools, Testimonials (hidden until real quotes), Enquire band D, footer ledger, glyph backdrop

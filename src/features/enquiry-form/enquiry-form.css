@@ -1,0 +1,30 @@
+/* Figma "Enquire · 1440": a surface card, two fields per row, labels above inputs, foot with reply note + Send. */
+.enquiry-form {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5);
+  padding: var(--space-6); border-radius: var(--radius-md);
+  background: var(--color-surface); border: 1px solid var(--color-hairline);
+}
+.enquiry-form__field { display: grid; gap: var(--space-2); }
+.enquiry-form__field--wide { grid-column: 1 / -1; }
+.enquiry-form__label { font-size: var(--text-sm); color: var(--color-text-muted); }
+.enquiry-form__input {
+  width: 100%; padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm); border: 1px solid var(--color-hairline);
+  background: var(--color-bg); color: var(--color-text); font: inherit;
+}
+textarea.enquiry-form__input { resize: vertical; min-height: 9rem; }
+.enquiry-form__input::placeholder { color: var(--color-steel); }
+.enquiry-form__input:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 1px; }
+.enquiry-form__input[aria-invalid="true"] { border-color: var(--color-text); }
+.enquiry-form__error { font-size: var(--text-sm); color: var(--color-text); }
+.enquiry-form__error::before { content: "! "; font-weight: var(--weight-bold); }
+.enquiry-form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.enquiry-form__foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); }
+.enquiry-form__reply, .enquiry-form__privacy { font-size: var(--text-sm); color: var(--color-text-muted); }
+.enquiry-form__privacy, .enquiry-form__failure { grid-column: 1 / -1; }
+.enquiry-form__failure { color: var(--color-text); }
+.enquiry-form button:disabled { opacity: 0.6; cursor: progress; }
+.enquiry-form button { border: 0; cursor: pointer; font: inherit; }
+.enquiry-form--done { grid-template-columns: minmax(0, 1fr); }
+.enquiry-form__done-title { font-size: var(--text-title); font-weight: var(--weight-bold); }
+@media (max-width: 40rem) { .enquiry-form { grid-template-columns: minmax(0, 1fr); } }

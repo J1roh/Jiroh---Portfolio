@@ -1,0 +1,24 @@
+/* Figma "Work index": 96px head + chips, then a sideways row per craft with its count, line and View all. */
+.work-index { padding-top: var(--space-8); }
+.work-index__head { display: grid; gap: var(--space-6); }
+.work-index__chips { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+.work-index .chip[aria-current="page"] { background: var(--color-ink); color: var(--color-on-ink); border-color: var(--color-ink); }
+.work-index__craft { margin-top: var(--space-9); padding-top: var(--space-5); border-top: 1px solid var(--color-hairline); }
+.work-index__craft-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-3) var(--space-6); }
+.work-index__craft-title { font-size: var(--text-title); font-weight: var(--weight-bold); }
+.work-index__craft-title sup { margin-left: var(--space-1); font-size: var(--text-micro); color: var(--color-text-muted); }
+.work-index__craft-line { color: var(--color-text-muted); font-size: var(--text-sm); }
+.work-index__all { margin-left: auto; font-size: var(--text-sm); font-weight: var(--weight-medium); }
+.work-index__tiles {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 280px);
+  gap: var(--space-5); margin: var(--space-6) 0 0; padding: 0 0 var(--space-3); list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin;
+}
+.work-index__tiles[data-grid="true"] { grid-auto-flow: row; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); overflow: visible; }
+.work-index__tile { scroll-snap-align: start; }
+.work-index__link { display: grid; gap: var(--space-2); }
+.work-index__image { display: block; aspect-ratio: 4 / 5; margin-bottom: var(--space-2); }
+.work-index__image.frame > img { object-position: top; transition: transform var(--duration-reveal) var(--easing-out); }
+.work-index__link:hover .work-index__image > img { transform: scale(1.03); }
+.work-index__title { font-weight: var(--weight-medium); }
+.work-index__sub { font-size: var(--text-sm); color: var(--color-text-muted); }

@@ -1,5 +1,6 @@
 import type { SiteContent } from "@content/index";
 import { Button } from "../../components/button";
+import { SmartLink } from "../../components/smart-link";
 import { ThemeToggle } from "../../components/theme-toggle";
 import { useTheme } from "../../lib/theme/use-theme";
 import "./top-bar.css";
@@ -10,11 +11,11 @@ export function TopBar({ content }: { content: SiteContent }) {
   return (
     <header className="top-bar">
       <div className="container top-bar__row">
-        <a className="top-bar__brand" href="#main" aria-label={`${content.brand}, back to top`}>{content.brand}</a>
+        <SmartLink className="top-bar__brand" href="/" aria-label={`${content.brand}, home`}>{content.brand}</SmartLink>
         <nav className="top-bar__nav" aria-label="Main">
           <ul className="top-bar__links">
             {content.nav.map((link) => (
-              <li key={link.href}><a className="top-bar__link" href={link.href}>{link.label}</a></li>
+              <li key={link.href}><SmartLink className="top-bar__link" href={link.href}>{link.label}</SmartLink></li>
             ))}
           </ul>
           <ThemeToggle theme={theme} onToggle={toggle} labels={content.theme} />

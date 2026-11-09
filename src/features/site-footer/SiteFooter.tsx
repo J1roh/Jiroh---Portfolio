@@ -1,4 +1,5 @@
 import type { ContactContent, FooterContent, Link } from "@content/index";
+import { SmartLink } from "../../components/smart-link";
 import "./site-footer.css";
 
 type Column = { label: string; links: Link[] };
@@ -26,7 +27,7 @@ export function SiteFooter({ content, nav, cta, contact }: Props) {
                 <h2 className="site-footer__label">{String(i + 1).padStart(3, "0")} / {column.label}</h2>
                 <ul className="site-footer__list">
                   {column.links.map((link) => (
-                    <li key={link.href + link.label}><a className="site-footer__link" href={link.href}>{link.label}</a></li>
+                    <li key={link.href + link.label}><SmartLink className="site-footer__link" href={link.href}>{link.label}</SmartLink></li>
                   ))}
                 </ul>
               </section>
@@ -36,7 +37,7 @@ export function SiteFooter({ content, nav, cta, contact }: Props) {
         <div className="site-footer__base">
           <p className="site-footer__mark">{content.wordmark}</p>
           <p className="site-footer__note">{content.note}</p>
-          <a className="site-footer__top" href="#">{content.toTop}<span aria-hidden="true">↑</span></a>
+          <a className="site-footer__top" href="#top">{content.toTop}<span aria-hidden="true">↑</span></a>
         </div>
       </div>
     </footer>

@@ -137,11 +137,11 @@
     "line": "Designer and editor for brand launches. Emails, ads, motion and video, from one desk.",
     "primary": {
       "label": "Start an enquiry",
-      "href": "#enquire"
+      "href": "/enquire"
     },
     "secondary": {
       "label": "See the work",
-      "href": "#work"
+      "href": "/work"
     },
     "listLabel": "Crafts",
     "crafts": [

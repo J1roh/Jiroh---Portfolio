@@ -66,7 +66,7 @@
     "all": "All",
     "allWork": {
       "label": "All work",
-      "href": "#work"
+      "href": "/work"
     },
     "items": [
       {
@@ -389,7 +389,7 @@
     ],
     "cta": {
       "label": "Start an enquiry",
-      "href": "mailto:contact@jiroh.works"
+      "href": "/enquire"
     },
     "art": "LET'S TALK",
     "glyphs": "$%&#@*+=WM8B"
